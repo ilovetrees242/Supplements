@@ -1,0 +1,10 @@
+--- /usr/bin/neofetch	2020-08-03 00:07:41.000000000 +0530
++++ ./neofetch	2026-06-04 13:56:51.423256589 +0530
+@@ -1490,6 +1490,7 @@
+             # Package Manager Programs.
+             has kiss       && tot kiss l
+             has pacman-key && tot pacman -Qq --color never
++            has Veiler     && tot Veiler list
+             has dpkg       && tot dpkg-query -f '.\n' -W
+             has rpm        && tot rpm -qa
+             has xbps-query && tot xbps-query -l
