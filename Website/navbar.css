@@ -1,8 +1,8 @@
 :root{
-    --light-yellow: #E3D89A;
-    --more-light-yellow: #E7DF9B;
-    --cool-yellow: #fde2a4;
-    --dark-cool-yellow: #FCE1A3;
+    --cool-white: #e6e5e9;
+    --cool-dark-white: #d2d3d5;
+    --dark-gray: #202021;
+    --black: #151516;
 }
 .mob-nav {
     display: none;
@@ -27,7 +27,6 @@
 .mob-nav div h1 {
     bottom: 0;
     color: #E6ECE6;
-    background: linear-gradient(45deg, #050506, var(--dark-cool-yellow));
     width: 50%;
     padding: 5px;
     border-radius: 5px;
@@ -62,13 +61,11 @@
     box-shadow: 5px 5px 50px black;
 }
 .nav {
-    background-color: #050506;
-    width: 20vw;
+    background-color: var(--black);
+    width: 21vw;
     height: 100%;
     position: fixed;
     overflow: hidden;
-    border-image: linear-gradient(to top, #151414 0%, #f7eba3 100%) 1; 
-    border-right: 4px solid;
     margin: 0;
     top: 0px;
     bottom: 0px;
@@ -77,8 +74,8 @@
 .nav div h1 {
     bottom: 0;
     padding: 25px;
-    color: #E6ECE6;
-    background: linear-gradient(45deg, #050506, var(--dark-cool-yellow));
+    color: #808080;
+    background: var(--cool-dark-white); 
     position: absolute;
     width: 100%;
 }
@@ -86,11 +83,12 @@
     text-decoration: none;
     display: block;
     text-align: center;
+    color: var(--cool-white);
     padding: 30px;
-    background: linear-gradient(45deg, var(--cool-yellow) 0%, #050505 50%);
+    background: linear-gradient(45deg, var(--cool-dark-white) 0%, var(--black) 70%);
     background-repeat: no-repeat;
-    background-size: 1000px;
-    background-position: calc(-30vw + 20%);
+    background-size: 1500px;
+    background-position: -1200px;
     transition: 1s ease-in-out;
 }
 .nav a:hover {
