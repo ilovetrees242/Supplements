@@ -35,6 +35,9 @@ ul {
 .headers {
     font-size: 35px;
 }
+.mheaders {
+    font-size: 25px;
+}
 .para {
     width: 80%;
 }
@@ -113,10 +116,10 @@ td {
 .cont div {
     transition: 1s ease-in-out;
     background-color: #101010;
-    width: 400px;
+    width: 800px;
     font-size: 20px;
     padding: 25px;
-    padding-right: 60%;
+    padding-right: calc(100% - 800px);
     display: flex;
     color: var(--cool-white);
     border-left: 5px solid var(--cool-white);
@@ -131,8 +134,8 @@ td {
 .cont div:last-child {
     padding: 0;
     height: 50px;
-    width: calc(60% + 400px);
     padding-left: 25px;
+    width: 100%;
     display: block;
 }
 .cont div:last-child div {
@@ -154,6 +157,21 @@ table {
 .op {
     background-color: var(--cool-dark-white);
 }
+.specpara {
+    padding: 25px;
+    height: 500px;
+    width: calc(79vw - 60px);
+    border-radius: 5px;
+    background-color: var(--dark-gray);
+}
+.specpara p {
+    color: var(--cool-white);
+    font-size: 17px;
+} 
+.special-word {
+    font-weight: 700;
+    color: var(--white);
+} 
 @media all and (max-width: 830px) {
     .intro {
         font-size: 50px;

@@ -1,10 +1,11 @@
 :root{
     --cool-white: #e6e5e9;
     --cool-dark-white: #d2d3d5;
+    --dark-white: #bfc0c4;
     --dark-gray: #202021;
     --light-gray: #303031;
     --slate: #606060;
     --black: #151516;
     --white: #ffffff;
-    --red: #ff9090;
+    --danger: #696969;
 }

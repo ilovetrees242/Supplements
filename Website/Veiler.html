@@ -96,7 +96,7 @@
         <br>
         <ul>
             <li style="margin-bottom: 8px;"><b class="code">sync</b> : This directory contains the packages which the package manager uses to store the packages which are available on the package repo</li>
-            <li><b class="code">local</b> : This directory contains the packages which are currently installed on the local system</li>
+<li><b class="code">local</b> : This directory contains the packages which are currently installed on the local system</li>
         </ul>
         <br>
         <p class="para" style="margin-bottom: 12px"><b class="code">/etc/Veiler.conf</b> : The configuration file</p>
@@ -107,16 +107,16 @@
         </h1><br>
         <p class="para">Here are the operations you can do with the package manager: </p><br>
         <ul>
-            <li><b class="code">unveil</b> : This action is used to <i style="color: gray; font-weight: bold">install</i> a new package into the system, or <i>DEST</i> specified by the user</li>
-            <li><b class="code">veil</b> : This action is used to <i style="color: gray; font-weight: bold">uninstall</i> a package from the system <i style="color: var(--red)">permanently</i></li>
-            <li><b class="code">strengthen</b> : This action is used to <i style="color: gray; font-weight: bold">update</i> all the packages <i>installed</i> on the system</li>
-            <li><b class="code">search</b> : This action can be used to <i style="color: gray; font-weight: bold">search</i> packages or package on the <i>sync database</i></li>
-            <li><b class="code">help</b> : This action is used to display <i style="color: gray; font-weight: bold">summarised information</i> about using the package manager</li>
-            <li><b class="code">info</b> : This action is used to display the version, name and description of a package or packages which are/is <i style="color: gray; font-weight: bold">installed</i> on the system</li>
-            <li><b class="code">version</b> : This action is used to display the <i style="color: gray; font-weight: bold">version</i> of the package manager</i></li>
-            <li><b class="code">rmpkg</b> : This action can be used to <i style="color: var(--red)">delete</i> all the occurences of the specified package(s) <i style="color: gray; font-weight: bold">in the cache directory</i></li>
-            <li><b class="code">pkgs</b> : This action is used to list the <i style="color: gray; font-weight: bold">number of packages installed</i>. Useful for other programs like fetch programs on the system</li>
-            <li><b class="code">list</b> : This action is used to list the names of all of the <i style="color: gray; font-weight: bold">packages installed</i>. Useful for other programs like fetch programs on the system</li>
+            <li style="margin-bottom: 7px;"><b class="code">unveil</b> : This action is used to <i class="special-word">install</i> a new package into the system, or <i>DEST</i> specified by the user</li>
+            <li style="margin-bottom: 7px;"><b class="code">veil</b> : This action is used to <i class="special-word">uninstall</i> a package from the system <i style="color: var(--danger)">permanently</i></li>
+            <li style="margin-bottom: 7px;"><b class="code">strengthen</b> : This action is used to <i class="special-word">update</i> all the packages <i>installed</i> on the system</li>
+            <li style="margin-bottom: 7px;"><b class="code">search</b> : This action can be used to <i class="special-word">search</i> packages or package on the <i>sync database</i></li>
+            <li style="margin-bottom: 7px;"><b class="code">help</b> : This action is used to display <i class="special-word">summarised information</i> about using the package manager</li>
+            <li style="margin-bottom: 7px;"><b class="code">info</b> : This action is used to display the version, name and description of a package or packages which are/is <i class="special-word">installed</i> on the system</li>
+            <li style="margin-bottom: 7px;"><b class="code">version</b> : This action is used to display the <i class="special-word">version</i> of the package manager</i></li>
+            <li style="margin-bottom: 7px;"><b class="code">rmpkg</b> : This action can be used to <i style="color: var(--danger)">delete</i> all the occurences of the specified package(s) <i class="special-word">in the cache directory</i></li>
+            <li style="margin-bottom: 7px;"><b class="code">pkgs</b> : This action is used to list the <i class="special-word">number of packages installed</i>. Useful for other programs like fetch programs on the system</li>
+            <li style="margin-bottom: 7px;"><b class="code">list</b> : This action is used to list the names of all of the <i class="special-word">packages installed</i>. Useful for other programs like fetch programs on the system</li>
         </ul>
         <br>
         <h1 class="bigheaders">Installing a package</h1>
@@ -158,7 +158,7 @@
         </ul><br>
         <h1 class="bigheaders" id="configfile">Using the configuration file</h1><br>
         <h2 class="headers">Introduction</h2>
-        <p class="para">You will find the configuration file for Veiler at /etc/Veiler/veiler.conf after installing the package manager. You can use the configuration file to set default options everytime you perform an action with the package manager instead of having to use options again and again</p>
+        <p class="para">You will find the configuration file for Veiler at /etc/Veiler/veiler.conf after installing the package manager. You can use the configuration file to set default options everytime you perform an action with the package manager instead of having to use commandline options again and again</p>
         <h2 class="headers">Variables</h2>
         <h3 class="headers" style="font-size: 20px; font-weight: 400"> A table of variables which are valid </h3>
         <br>
@@ -180,30 +180,43 @@
             <tr class="op"><th colspan="4">Path variables</th></tr>
             <tr class="heading"><th>Name</th><th>Type</th><th>Description</th><th>Usage</th></tr>
             <tr><td>VEILERDEST</td><td>String</td><td>This variable contains the final destination where packages will be installed. Default value is <i class="special-word">/ ( root directory ).</i> Changing it will require it to be an absolute path, otherwise package manager will break<td>Provide an absolute path to the directory you want to install packages into. Example: <i class="special-word">/home/LFS/Dest</i></td></tr>
-            <tr><td>PKGREPO</td><td>String</td><td>This variable contains the URL of the package repository ( https, ftp, http ). Default value is <a class="special-word" href="https://ilovetrees242.github.io/Supplements/Website/Packages">https://ilovetrees242.github.io/Supplements/Website/Packages</a></td><td>Set the value of this variable to be a valid URL to the package repository you want to use. See <a href="#pathvars_pkgrepo" class="special-word">Path Variables</a> for more information</td></tr>
+            <tr><td>PKGREPO</td><td>String</td><td>This variable contains the URL of the package repository ( https, ftp, http ). Default value is <a class="special-word" href="https://ilovetrees242.github.io/Supplements/Website/Packages">https://ilovetrees242.github.io/Supplements/Website/Packages</a></td><td>Set the value of this variable to be a valid URL to the package repository you want to use. See <a href="#pathvars_pkgrepo" class="special-word">PKG Repo path</a> for more information</td></tr>
             <tr><td>VEILERCACHEPATH</td><td>String</td><td>This variable contains an absolute path to the cache path of the package manager. Default value is <i class="special-word">/var/cache/Veiler</i> See <a class="special-word" href="#pathvars_vcache">Cache Path</a> for more information.</td><td>Set an absolute path to the directory you want to use as an cache directory. <b class="danger-word">WARNING: </b> If you use a non empty directory, like your users home directory then <i class="danger-word">EVERY</i> directory inside that directory will be <i class="danger-word">deleted</i> if <i class="special-word">$VEILERSKIPCLEAN</i> is set to 0</td></tr>
             <tr><td>VEILERDBPATH</td><td>String</td><td>This variable contains an absolute path to the database of the package manager. The package manager uses this database to get information related to packages, like their name, version, source, etc. See <a class="special-word" href="#pathvars_vdb">DB Path</a> for more information. Using an empty directory as the DBPATH will make the package manager "confused" ( as it will have nowhere to get data from ). Default value is <i class="special-word">/var/db/Veiler</i></td><td>To use this, make sure the DB directory exists, and has the subdirectories local and sync with package entries as directories. Set an absolute path to the database you want to use.</td></tr>
             <tr><td>VEILERCONFIGPATH</td><td>String</td><td>This variable contains an absolute path to the configuration file for Veiler. Though it would not make sense to have the path to the configuration file inside the configuration file. This variable is set inside the package manager to <i class="special-word">/etc/Veiler/veiler.conf</i>. You can use another configuration file using the <b>--config</b> option.<td>To use this, do not set this variable inside any existing configuration file, but pass the path to it manually through command line, or you can change it inside the package manager</tr>
+	    <tr><td>VEILERPREFIX</td><td>String</td><td>This variable contains an absolute path to the prefix under which packages should be installed. By default its set to <i class="special-word">/usr</i> but you can change it to something like <i class="special-word">/usr/local</i>. Under your <b>$VEILERDEST</b>, the prefix will be created. Use this for non system-wide installations or custom installations.</td><td>To use this, simply change the value to the directory you would like as your prefix, example: <i class="special-word">/usr/local</i>. Again this must be an absolute path in order to work correctly.</tr>
         </table>
-        <br>
+    <br>
+    <h1 class="bigheaders">Path variables</h1><br>
+    <h2 class="headers">PKG Repo path</h2><br>
+	<h3 class="mheaders">Introduction</h3><br>
+	<p class="para">PKG Repo path basically contains the URL to the package hosting repository. The package manager uses wget to download files from the internet through the https. The hosting package repository must contain to things:</p><br>
+	<ul>
+			<li style="margin-bottom: 8px"><p><b class="code">[PKGREPO]/Patches: </b>Will contain all the patches, for fixing upstream code bugs</p>
+		    <li><p><b class="code">[PKGREPO]/Packages: </b> Will contain the actual build tarballs, which contain the integrity file and buildscript</p>
+	</ul>
+    <br>
+	<h3 class="mheaders">How to use</h3>
+	<p class="para">
         <h1 class="bigheaders">How it works</h1><br>
         <p class="para">In my opinion, this package manager is fairly one of the most simplest package managers I have seen out of all. Mainly due to this package manager focusing more on installing and building the packages instead of running extra things. So here is how it works under the hood: </p>
         <h2 class="headers">Unveil</h2>
-        <div class="specpara">--- Stages ---
-            <div> Check if the current user is root </div>
-            <div> Additional checks </div>
-            <div> Check if the packages exist </div>
-            <div> Resolve dependencies </div>
-            <div> Check if the current user is root </div>
-            <div> Check if its an upgrade or not </div>
-            <div> Check if available disk space is sufficient </div>
-            <div> Display information related to sizes </div>
-            <div> If <i class="special-word">--ask</i> is set, then give a confirmation prompt before proceeding to install</div>
-            <div> Download the build tarballs from the set repo </div>
-            <div> Extract each of them </div>
-            <div> Now verify package integrity </div>
-            <div> If verification was successful, continue by building the packages now </div>
-            <div> Now install the packages into <i class="special-word">$VEILERDEST</i> ( if $VEILERONLYBUILD is set to 0 ) </div>
+        <div class="specpara">
+	    <h2> Stages </h2>		
+	    <div><p> Check if the current user is root</p></div>
+	    <div><p> Additional checks</p></div>
+            <div><p> Check if the packages exist</p></div>
+            <div><p> Resolve dependencies</p></div>
+            <div><p> Check if the current user is root</p></div>
+	    <div><p> Check if its an upgrade or not</p></div>
+            <div><p> Check if available disk space is sufficient</p></div>
+	    <div><p> Display information related to sizes</p></div>
+            <div><p> If <i class="special-word">--ask</i> is set, then give a confirmation prompt before proceeding to install</p></div>
+            <div><p> Download the build tarballs from the set repo</p></div>
+	    <div><p> Extract each of them</p></div>
+            <div><p> Now verify package integrity</p></div>
+	    <div><p> If verification was successful, continue by building the packages now</p></div>
+            <div><p> Now install the packages into <i class="special-word">$VEILERDEST</i> ( if $VEILERONLYBUILD is set to 0 )</p></div>
         </div>
         </ul>
     </main>
