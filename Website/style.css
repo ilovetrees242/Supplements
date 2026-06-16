@@ -11,10 +11,6 @@ body {
 main {
     margin-left: 21%;
 }
-@keyframes typing {
-    from { margin-left: 160px }
-    to { margin-left: 180px }
-}
 .intro {
     z-index: -1;
     width: 100%;
@@ -38,21 +34,21 @@ main {
 .cont {
     padding-left: 25px;
     padding-bottom: 60px;
+    width: calc(80% - 25px);
 }
 .cont div {
     transition: 1s ease-in-out;
     background-color: #101010;
-    width: 200px;
+    width: calc(150px + 60%);
     font-size: 20px;
     padding: 25px;
-    padding-right: 60%;
     display: flex;
     color: var(--cool-white);
     border-left: 5px solid var(--cool-white);
 }
 .cont div:nth-of-type(1) {
     background-color: var(--cool-white);
-    text-align: center
+    text-align: center;
 }
 .cont div:nth-of-type(1) h2 {
     color: var(--black);
@@ -60,7 +56,7 @@ main {
 .cont div:last-child {
     padding: 0;
     height: 50px;
-    width: calc(60% + 200px);
+    width: calc(60% + 175px);
     padding-left: 25px;
     display: block;
 }
@@ -81,7 +77,7 @@ main {
     padding-left: 25px;
 }
 .cont p {
-    width: 60%;
+    width: 65%;
     font-size: 21px;
 }
 .parap {
@@ -89,7 +85,7 @@ main {
     padding-left: 25px;
 }
 #proglangc, #proglangasm, #proglangbash {
-    width: calc(60% + 225px);
+    width: calc(60% + 200px);
     padding: 0px
 }
 #proglangc img {
@@ -97,7 +93,7 @@ main {
     height: 100px;
 }
 #proglangasm div, #proglangc div, #proglangbash div {
-    width: 110px;
+    width: 100px;
     height: 100px;
     border: none;
 }
@@ -127,9 +123,12 @@ main {
 #cont2 p {
     font-size: 15px;
     padding-left: 5px;
-    width: 70%;
+    width: 95%;
     display: block;
     color: var(--cool-dark-white)
+}
+#proglangc p {
+    width: 100%;
 }
 footer {
     margin-top: 250px;
@@ -142,4 +141,24 @@ footer a {
 }
 footer p{
     color: white;
+}
+#cont2 article {
+    width: calc(50px + 60%);
+}
+@media all and (max-width: 545px) {
+    #proglangc div, #proglangasm div, #proglangbash div {
+        display: none;
+    }
+    .intro {
+        margin-top: 70px;
+        font-size: 45px;
+    }
+}
+@media all and (max-width: 830px) {
+    main {
+        margin-left: 0px;
+    }
+    .intro {
+        margin-top: 70px;
+    }
 }

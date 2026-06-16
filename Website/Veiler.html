@@ -162,6 +162,7 @@
         <h2 class="headers">Variables</h2>
         <h3 class="headers" style="font-size: 20px; font-weight: 400"> A table of variables which are valid </h3>
         <br>
+        <div class="overflowmask">
         <table>
             <tr class="op"><th colspan="4">Operation variables</th></tr>
             <tr class="heading"><th>Name</th><th>Type</th><th>Purpose</th><th>Usage</th></tr>
@@ -186,6 +187,7 @@
             <tr><td>VEILERCONFIGPATH</td><td>String</td><td>This variable contains an absolute path to the configuration file for Veiler. Though it would not make sense to have the path to the configuration file inside the configuration file. This variable is set inside the package manager to <i class="special-word">/etc/Veiler/veiler.conf</i>. You can use another configuration file using the <b>--config</b> option.<td>To use this, do not set this variable inside any existing configuration file, but pass the path to it manually through command line, or you can change it inside the package manager</tr>
 	    <tr><td>VEILERPREFIX</td><td>String</td><td>This variable contains an absolute path to the prefix under which packages should be installed. By default its set to <i class="special-word">/usr</i> but you can change it to something like <i class="special-word">/usr/local</i>. Under your <b>$VEILERDEST</b>, the prefix will be created. Use this for non system-wide installations or custom installations.</td><td>To use this, simply change the value to the directory you would like as your prefix, example: <i class="special-word">/usr/local</i>. Again this must be an absolute path in order to work correctly.</tr>
         </table>
+        </div>
     <br>
     <h1 class="bigheaders">Path variables</h1><br>
     <h2 class="headers">PKG Repo path</h2><br>

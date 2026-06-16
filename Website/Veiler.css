@@ -113,13 +113,15 @@ td {
     padding-bottom: 60px;
     width: 80%
 }
+.overflowmask {
+    overflow: scroll;
+}
 .cont div {
     transition: 1s ease-in-out;
     background-color: #101010;
-    width: 800px;
+    width: calc(100% - 25px);
     font-size: 20px;
     padding: 25px;
-    padding-right: calc(100% - 800px);
     display: flex;
     color: var(--cool-white);
     border-left: 5px solid var(--cool-white);
@@ -151,6 +153,9 @@ td {
     border-bottom: 50px solid #050506;
     transform: translateY(-50px);
 }
+.cont-intro {
+    padding-right: 20px;
+}
 table {
     border-collapse: collapse
 }
@@ -175,18 +180,9 @@ table {
 @media all and (max-width: 830px) {
     .intro {
         font-size: 50px;
+        margin-top: 70px
     }
-    .nav {
-        display: none; 
-    }
-    .bigheaders {
-        background: linear-gradient(45deg, #050506, var(--cool-yellow) 70%);
-    }
-    ul {
-        margin: 5px;
-        padding-left: 30px;
-    }
-    .mob-nav {
-        display: block;
+    main {
+        margin-left: 0px
     }
 }
