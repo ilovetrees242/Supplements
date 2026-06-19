@@ -1,0 +1,12 @@
+--- ./synfetch.orig	2026-06-19 18:42:19.021934211 +0530
++++ ./synfetch	2026-06-19 18:43:22.675018932 +0530
+@@ -1873,6 +1873,9 @@
+     elif command -v port >/dev/null; then
+         count=$(port -q installed 2>/dev/null | wc -l)
+         pkgs+=("$count (MacPorts)")
++    elif command -v Veiler >/dev/null; then
++        count=$(Veiler pkgs)
++        pkgs+=("$count (Veiler)")
+     elif command -v pkgutil >/dev/null || command -v pkg >/dev/null; then
+         count=$(pkgutil --pkgs 2>/dev/null | wc -l)
+         pkgs+=("$count (Fink/pkgutil)")
