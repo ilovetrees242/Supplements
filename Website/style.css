@@ -13,7 +13,7 @@ main {
 }
 .intro {
     z-index: -1;
-    width: 100%;
+    width: calc(100% - 100px);
     top: 10px;
     padding: 50px;
     font-size: 75px;
@@ -39,7 +39,6 @@ main {
 .cont div {
     transition: 1s ease-in-out;
     background-color: #101010;
-    width: calc(150px + 60%);
     font-size: 20px;
     padding: 25px;
     display: flex;
@@ -56,7 +55,6 @@ main {
 .cont div:last-child {
     padding: 0;
     height: 50px;
-    width: calc(60% + 175px);
     padding-left: 25px;
     display: block;
 }
@@ -85,7 +83,6 @@ main {
     padding-left: 25px;
 }
 #proglangc, #proglangasm, #proglangbash {
-    width: calc(60% + 200px);
     padding: 0px
 }
 #proglangc img {
@@ -116,8 +113,6 @@ main {
     background: conic-gradient(#ededed 40deg, #434345 150deg, #413e45 250deg, #4cac23 270deg, #ededed 350deg);
 }
 #cont2 h2 {
-    width: 500px;
-    height: 40px;
     padding-left: 5px;
 }
 #cont2 p {
@@ -126,9 +121,6 @@ main {
     width: 95%;
     display: block;
     color: var(--cool-dark-white)
-}
-#proglangc p {
-    width: 100%;
 }
 footer {
     margin-top: 250px;

@@ -47,7 +47,7 @@
         <br>
         <div class="cont">
             <div><h1 class="headers">Features</h1></div>
-            <div><b>Can install packages: </b><p>Installs packages by staging them at first then copying them to the root filesystem or $VEILERDEST</p></div>
+            <div>Can install packages</div>
             <div>Can uninstall packages</div>
             <div>Source based</div>
             <div>Useflags are supported </div>
@@ -60,9 +60,7 @@
             <div>Allows you to run test suites</div>
             <div>Confirmation prompts</div>
             <div>Information related to disk spaces</div>
-            <div>
-                <div class="corner">
-                </div>
+            <div class="corner">
             </div>
         </div>
         <br>
@@ -180,47 +178,54 @@
             <tr><td>VEILERNOROOT</td><td>To enable or disable needing superuser priveledges for building packages</td></tr>
             <tr class="op"><th colspan="4">Path variables</th></tr>
             <tr class="heading"><th>Name</th><th>Type</th><th>Description</th><th>Usage</th></tr>
-            <tr><td>VEILERDEST</td><td>String</td><td>This variable contains the final destination where packages will be installed. Default value is <i class="special-word">/ ( root directory ).</i> Changing it will require it to be an absolute path, otherwise package manager will break<td>Provide an absolute path to the directory you want to install packages into. Example: <i class="special-word">/home/LFS/Dest</i></td></tr>
-            <tr><td>PKGREPO</td><td>String</td><td>This variable contains the URL of the package repository ( https, ftp, http ). Default value is <a class="special-word" href="https://ilovetrees242.github.io/Supplements/Website/Packages">https://ilovetrees242.github.io/Supplements/Website/Packages</a></td><td>Set the value of this variable to be a valid URL to the package repository you want to use. See <a href="#pathvars_pkgrepo" class="special-word">PKG Repo path</a> for more information</td></tr>
-            <tr><td>VEILERCACHEPATH</td><td>String</td><td>This variable contains an absolute path to the cache path of the package manager. Default value is <i class="special-word">/var/cache/Veiler</i> See <a class="special-word" href="#pathvars_vcache">Cache Path</a> for more information.</td><td>Set an absolute path to the directory you want to use as an cache directory. <b class="danger-word">WARNING: </b> If you use a non empty directory, like your users home directory then <i class="danger-word">EVERY</i> directory inside that directory will be <i class="danger-word">deleted</i> if <i class="special-word">$VEILERSKIPCLEAN</i> is set to 0</td></tr>
-            <tr><td>VEILERDBPATH</td><td>String</td><td>This variable contains an absolute path to the database of the package manager. The package manager uses this database to get information related to packages, like their name, version, source, etc. See <a class="special-word" href="#pathvars_vdb">DB Path</a> for more information. Using an empty directory as the DBPATH will make the package manager "confused" ( as it will have nowhere to get data from ). Default value is <i class="special-word">/var/db/Veiler</i></td><td>To use this, make sure the DB directory exists, and has the subdirectories local and sync with package entries as directories. Set an absolute path to the database you want to use.</td></tr>
-            <tr><td>VEILERCONFIGPATH</td><td>String</td><td>This variable contains an absolute path to the configuration file for Veiler. Though it would not make sense to have the path to the configuration file inside the configuration file. This variable is set inside the package manager to <i class="special-word">/etc/Veiler/veiler.conf</i>. You can use another configuration file using the <b>--config</b> option.<td>To use this, do not set this variable inside any existing configuration file, but pass the path to it manually through command line, or you can change it inside the package manager</tr>
-	    <tr><td>VEILERPREFIX</td><td>String</td><td>This variable contains an absolute path to the prefix under which packages should be installed. By default its set to <i class="special-word">/usr</i> but you can change it to something like <i class="special-word">/usr/local</i>. Under your <b>$VEILERDEST</b>, the prefix will be created. Use this for non system-wide installations or custom installations.</td><td>To use this, simply change the value to the directory you would like as your prefix, example: <i class="special-word">/usr/local</i>. Again this must be an absolute path in order to work correctly.</tr>
+            <tr><td>VEILERDEST</td><td rowspan="6" style="padding: 0px 0px 25px 25px;">String</td><td>This variable contains the final destination where packages will be installed. Default value is <i class="special-word">/ ( root directory ).</i> Changing it will require it to be an absolute path, otherwise package manager will break<td>Provide an absolute path to the directory you want to install packages into. Example: <i class="special-word">/home/LFS/Dest</i></td></tr>
+            <tr><td>PKGREPO</td><td>This variable contains the URL of the package repository ( https, ftp, http ). Default value is <a class="special-word" href="https://ilovetrees242.github.io/Supplements/Website/Packages">https://ilovetrees242.github.io/Supplements/Website/Packages</a></td><td>Set the value of this variable to be a valid URL to the package repository you want to use. See <a href="#pathvars_pkgrepo" class="special-word">PKG Repo path</a> for more information</td></tr>
+            <tr><td>VEILERCACHEPATH</td><td>This variable contains an absolute path to the cache path of the package manager. Default value is <i class="special-word">/var/cache/Veiler</i> See <a class="special-word" href="#pathvars_vcache">Cache Path</a> for more information.</td><td>Set an absolute path to the directory you want to use as an cache directory. <b class="danger-word">WARNING: </b> If you use a non empty directory, like your users home directory then <i class="danger-word">EVERY</i> directory inside that directory will be <i class="danger-word">deleted</i> if <i class="special-word">$VEILERSKIPCLEAN</i> is set to 0</td></tr>
+            <tr><td>VEILERDBPATH</td><td>This variable contains an absolute path to the database of the package manager. The package manager uses this database to get information related to packages, like their name, version, source, etc. See <a class="special-word" href="#pathvars_vdb">DB Path</a> for more information. Using an empty directory as the DBPATH will make the package manager "confused" ( as it will have nowhere to get data from ). Default value is <i class="special-word">/var/db/Veiler</i></td><td>To use this, make sure the DB directory exists, and has the subdirectories local and sync with package entries as directories. Set an absolute path to the database you want to use.</td></tr>
+            <tr><td>VEILERCONFIGPATH</td><td>This variable contains an absolute path to the configuration file for Veiler. Though it would not make sense to have the path to the configuration file inside the configuration file. This variable is set inside the package manager to <i class="special-word">/etc/Veiler/veiler.conf</i>. You can use another configuration file using the <b>--config</b> option.<td>To use this, do not set this variable inside any existing configuration file, but pass the path to it manually through command line, or you can change it inside the package manager</tr>
+	    <tr><td>VEILERPREFIX</td><td>This variable contains an absolute path to the prefix under which packages should be installed. By default its set to <i class="special-word">/usr</i> but you can change it to something like <i class="special-word">/usr/local</i>. Under your <b>$VEILERDEST</b>, the prefix will be created. Use this for non system-wide installations or custom installations.</td><td>To use this, simply change the value to the directory you would like as your prefix, example: <i class="special-word">/usr/local</i>. Again this must be an absolute path in order to work correctly.</tr>
         </table>
         </div>
     <br>
     <h1 class="bigheaders">Path variables</h1><br>
-    <h2 class="headers">PKG Repo path</h2><br>
+    <h2 class="headers" id="pathvars_pkgrepo">PKG Repo path</h2><br>
 	<h3 class="mheaders">Introduction</h3><br>
 	<p class="para">PKG Repo path basically contains the URL to the package hosting repository. The package manager uses wget to download files from the internet through the https. The hosting package repository must contain to things:</p><br>
 	<ul>
-			<li style="margin-bottom: 8px"><p><b class="code">[PKGREPO]/Patches: </b>Will contain all the patches, for fixing upstream code bugs</p>
-		    <li><p><b class="code">[PKGREPO]/Packages: </b> Will contain the actual build tarballs, which contain the integrity file and buildscript</p>
+			<li style="margin-bottom: 8px"><p><b class="code">[PKGREPO]/Patches:</b> Will contain all the patches, for fixing upstream code bugs</p>
+		    <li><p><b class="code">[PKGREPO]/Packages:</b> Will contain the actual build tarballs, which contain the integrity file and buildscript</p>
 	</ul>
     <br>
 	<h3 class="mheaders">How to use</h3>
-	<p class="para">
-        <h1 class="bigheaders">How it works</h1><br>
-        <p class="para">In my opinion, this package manager is fairly one of the most simplest package managers I have seen out of all. Mainly due to this package manager focusing more on installing and building the packages instead of running extra things. So here is how it works under the hood: </p>
-        <h2 class="headers">Unveil</h2>
-        <div class="specpara">
-	    <h2> Stages </h2>		
-	    <div><p> Check if the current user is root</p></div>
-	    <div><p> Additional checks</p></div>
-            <div><p> Check if the packages exist</p></div>
-            <div><p> Resolve dependencies</p></div>
-            <div><p> Check if the current user is root</p></div>
-	    <div><p> Check if its an upgrade or not</p></div>
-            <div><p> Check if available disk space is sufficient</p></div>
-	    <div><p> Display information related to sizes</p></div>
-            <div><p> If <i class="special-word">--ask</i> is set, then give a confirmation prompt before proceeding to install</p></div>
-            <div><p> Download the build tarballs from the set repo</p></div>
-	    <div><p> Extract each of them</p></div>
-            <div><p> Now verify package integrity</p></div>
-	    <div><p> If verification was successful, continue by building the packages now</p></div>
-            <div><p> Now install the packages into <i class="special-word">$VEILERDEST</i> ( if $VEILERONLYBUILD is set to 0 )</p></div>
-        </div>
+    <p class="para">To use PKGREPO, you need to first of all host the repository, and then the package manager will download packages from the repository through http. Patches should be applied in the buildscript itself. The <i class="special-word">[PKGREPO]/Packages</i> is what you need to set as <i class="special-word">PKGREPO</i>. Once you do that, it should contains tarballs like this:    </p><br>
+    <b class="code">build-[PKGNAME]-[PKGVERSION].tar.gz</b><br><br>
+    <p class="para">After you have that, the tarball should contain the file called <i class="special-word">MOONBUILD</i> along with another file called integrity.sha256</i></p><br>
+    <div class="note">
+        <div>Note</div>
+        <p class="para">[PKGNAME] and [PKGVERSION] should match MOONPKGNAME and MOONPKGVERSION in the <i class="special-word">info</i> file in the database of the package manager</i>
+    </div>
+    <br>
+    <h2 class="headers" id="pathvars_vdb">DB Path</h2><br>
+	<h3 class="mheaders">Introduction</h3><br>
+    <p class="para">The DB path is the database of the package manager, non-sql which lives on the filesystem. Instead of SQL or JSON to query data, the package manager queries a package entry in <i class="special-word">$VEILERDBPATH/sync</i>. If the package is not found, the package manager will exit with an error. Otherwise, it will proceed with the installation. Each package entry mainly contains 5 files: </p><br>
+    <ul>
+        <li style="margin-bottom: 8px"><b class="code">files</b> Contains the installed files on the system. This file is dynamically created after the installation of a package, only under <i class="special-word">$VEILERDBPATH</i></li>
+        <li style="margin-bottom: 8px"><b class="code">docfiles</b> Contains all the documentation files for the package. This file is not dynamically created and its contents are static. After an installation, the package manager reads this file and deletes all the files listed in the staging area.</li>
+        <li style="margin-bottom: 8px"><b class="code">info</b> The most important file. This file contains the actual data related to the package. It is an executable file which contains shell variables, and the package manager reads the data by sourcing this file. Heres what the file contains:</li>
+        <ul>
+            <li><p class="para"><i class="code" style="padding: 3px">Title ( NOT A VARIABLE )</i> This is the first line of the file which is a comment. It contains the name of the package, and in brackets its full form. Example: <i class="special-word">Perl ( Practical extraction and report language )</i></p>
+            <li><p class="para"><i class="code" style="padding: 3px">MOONPKGNAME</i> This variable contains the name of the package. This name is used for extracting and configuring the package throughout the installation. Example: <i class="special-word">tcl</i></p>
+            <li><p class="para"><i class="code" style="padding: 3px">MOONPKGVERSION</i> This variable contains the name of the package. This name is used for extracting and configuring the package throughout the installation. Example: <i class="special-word">tcl</i></p>
+            <li><p class="para"><i class="code" style="padding: 3px">MOONPKG</i> This variable contains the full name of the package. It is defined by deliminiting <i class="special-word">$MOONPKGNAME</i> and <i class="special-word">$MOONPKGVERSION</i> by a '-'. Example: <i class="special-word">which-2.23</i></p>
+            <li><p class="para"><i class="code" style="padding: 3px">EXTENSION</i> This variable contains the extension of the <i class="special-word">source tarball</i>. It can be .tar.xz, .tar.zstd, .tar.gz, .bz2, .tar.bz2, or zip. The package manager will use this as the extension of the source tarball after downloading it. Example: <i class="special-word">.tar.xz</i></p>
+            <li><p class="para"><i class="code" style="padding: 3px">SRC</i> This variable contains the package source. The upstream URL for the package is used here. You can use variables in this to make it more efficient. Example: <i class="special-word">https://mirrors.hopbox.net/gnu/glibc/glibc-2.43.tar.xz</i></p></li>
+            <li><p class="para"><i class="code" style="padding: 3px">DESC</i> This variable contains a brief, precise description of the package. It denotes the purpose of the package, no explanation. Example ( for gcc ): <i class="special-word">The gcc package contains the gnu compiler collection for compilation of various programming languages</i></p></li>
+            <li><p class="para"><i class="code" style="padding: 3px">INSTALLEDSIZE</i> The default space in bytes which is taken up by what the package installs. Example: Zlib's libraries may take up around 500KiB, or some other X package's libraries, programs and documentation may take up 25MiB</p></li>
+            <li><p class="para"><i class="code" style="padding: 3px">WODOCINSTALLEDSIZE</i> The installed size without the package's documentation. </p></li>
+            <li><p class="para"><i class="code" style="padding: 3px">DOWNLOADSIZE</i> The download size of the package ( including patches and additional downloads ).</p></li>
+            <li><p class="para"><i class="code" style="padding: 3px">REQDSKSPC</i> The required disk space without for the package ( no test suites ). This does NOT include the installed size. So if you want to calculate the REQDSKSPC size, then you need to remove the installed files and only count the buildscript, checksums files and the package sources</p></li>
         </ul>
+    </ul>
     </main>
 </body>
 </html>

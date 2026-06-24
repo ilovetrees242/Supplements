@@ -54,10 +54,10 @@ li {
     color: var(--cool-dark-white);
     margin-bottom: 3px;
 }
-.note {
+.note, .imp, .warn {
     width: 60%;
     position: relative;
-    background-color: #202020;
+    background-color: var(--black);
 }
 .note p {
     padding: 25px;
@@ -69,24 +69,14 @@ li {
     padding: 20px;
     font-size: 25px;
 }
-.imp {
-    width: 60%;
-    position: relative;
-    background-color: #202020;
-}
 .imp p {
     padding: 25px;
-}
-.warn {
-    width: 60%;
-    position: relative;
-    background-color: #202020;
 }
 .warn p {
     padding: 25px;
 }
 .warn div {
-    background-color: orange;
+    background-color: var(--dark-white);
     text-align: center;
     padding: 20px;
     font-size: 25px;
@@ -101,7 +91,11 @@ td {
 }
 .heading {
     padding: 5px;
-    background-color: var(--slate);
+    background-color: var(--dark-white);
+    color: var(--light-gray);
+}
+.heading > th {
+    color: var(--white);
 }
 .cont .headers {
     margin: 0;
@@ -167,7 +161,7 @@ table {
     height: 500px;
     width: calc(79vw - 60px);
     border-radius: 5px;
-    background-color: var(--dark-gray);
+    background-color: var(--dark-cool-white);
 }
 .specpara p {
     color: var(--cool-white);
