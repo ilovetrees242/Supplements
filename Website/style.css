@@ -126,6 +126,8 @@ footer {
     margin-top: 250px;
     background-color: var(--black);
     padding: 25px;
+    width: calc(100% - 21vw);
+    margin-left: 21vw;
 }
 footer a {
     text-decoration: none;

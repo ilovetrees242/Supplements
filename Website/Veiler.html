@@ -11,41 +11,157 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="Images/CW.png">
     <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <style>
+        .mob-nav-panel .contents a {
+            color: #e5e5e9;
+        }
+    </style>
 </head>
 <body>
     <div class="mob-nav">
-        <div>
-            <h1>CoolWeb</h1>
+	<div>
+	    <h1>CoolWeb</h1>
 	    <div class="btn">≡</div>
-        </div>
+	</div>
     </div>
     <div class="mob-nav-panel">
         <a href="c.html">C</a>
         <a href="Packages/packages.html">Packages</a>
         <a href="index.html">Home</a>	
+        <div class="contents">
+            <h3 class="topics">Introduction</h3>
+			<a class="subtopic" href="#abtpm">About the PM</a>
+		    <a class="subtopic" href="#contri">Contributing</a>
+			<a class="subtopic" href="#feat">Features</a>
+		    <a class="subtopic" href="#disabil">What it cannot do</a>
+            <h3 class="topics">Installation</h3>
+			<a class="subtopic" href="#instpm">Installing the package manager</a>
+            <h3 class="topics">Getting started</h3>
+			<a class="subtopic ssubtopic" href="#basicops">Basic operations</a>
+            <div class="subtopic-content">
+                <a href="#unveil">Unveil</a>
+                <a href="#veil">Veil</a>
+                <a href="#strengthen">Strengthen</a>
+                <a href="#search">Search</a>
+                <a href="#help">Help</a>
+                <a href="#info">Info</a>
+                <a href="#version">Version</a>
+                <a href="#rmpkg">Rmpkg</a>
+                <a href="#pkgs">Pkgs</a>
+                <a href="#list">List</a>
+            </div>
+            <h3 class="topics">Installing a package</h3>
+			<a class="subtopic" href="#instpkg">How to install a package</a>
+			<a class="ssubtopic subtopic" href="#opts">Options</a>
+            <div class="subtopic-content">
+                <a href="#optquiet">--quiet</a>
+                <a href="#optask">--ask</a>
+                <a href="#optdoc">--documentation</a>
+                <a href="#opttest">--test</a>
+                <a href="#optnoroot">--no-root</a>
+                <a href="#optskipclean">--skip-clean</a>
+                <a href="#optskipintegrity">--skip-integrity</a>
+                <a href="#optmegabytes">--megabytes</a>
+                <a href="#optnoerrexit">--no-errexit</a>
+                <a href="#optskipdesc">--skip-description</a>
+                <a href="#optskipinst">--skip-installed</a>
+                <a href="#optwithdest">--with-dest</a>
+                <a href="#optconfig">--config</a>
+                <a href="#optbuildonly">--build-only</a>
+            </div>
+            <h3 class="topics">Configuration file</h3>
+			<a class="subtopic" href="#cfgintro">Introduction</a>
+            <a class="subtopic ssubtopic" href="#cfgvar">Valid variables</a>
+            <div class="subtopic-content">
+                <a href="#opvar">Operation variables</a>
+                <a href="#pathvar">Path variables</a>
+            </div>
+            <h3 class="topics">Path variables</h3>
+			<a class="subtopic" href="#pvintro">Introduction</a>
+			<a class="subtopic" href="#pv_pkgrepo">PKG Repo path</a>
+            <a class="subtopic" href="#pathvars_db">DB Path</a>
+            <a class="subtopic" href="#pathvars_cache">Cache Path</a>
+            <a class="subtopic" href="#pathvars_prefix">Prefix</a>
+            <a class="subtopic" href="#pathvars_dest">Dest</a>
+        </div>
     </div>
     <nav class="nav">
         <a href="c.html">C</a>
         <a href="Packages/packages.html">Packages</a>
         <a href="index.html">Home</a>
-        <div>
-            <h1>CoolWeb</h1>
+        <div class="contents">
+            <h3 class="topics">Introduction</h3>
+			<a class="subtopic" href="#abtpm">About the PM</a>
+		    <a class="subtopic" href="#contri">Contributing</a>
+			<a class="subtopic" href="#feat">Features</a>
+		    <a class="subtopic" href="#disabil">What it cannot do</a>
+            <h3 class="topics">Installation</h3>
+			<a class="subtopic" href="#instpm">Installing the package manager</a>
+            <h3 class="topics">Getting started</h3>
+			<a class="subtopic ssubtopic" href="#basicops">Basic operations</a>
+            <div class="subtopic-content">
+                <a href="#unveil">Unveil</a>
+                <a href="#veil">Veil</a>
+                <a href="#strengthen">Strengthen</a>
+                <a href="#search">Search</a>
+                <a href="#help">Help</a>
+                <a href="#info">Info</a>
+                <a href="#version">Version</a>
+                <a href="#rmpkg">Rmpkg</a>
+                <a href="#pkgs">Pkgs</a>
+                <a href="#list">List</a>
+            </div>
+            <h3 class="topics">Installing a package</h3>
+			<a class="subtopic" href="#instpkg">How to install a package</a>
+			<a class="ssubtopic subtopic" href="#opts">Options</a>
+            <div class="subtopic-content">
+                <a href="#optquiet">--quiet</a>
+                <a href="#optask">--ask</a>
+                <a href="#optdoc">--documentation</a>
+                <a href="#opttest">--test</a>
+                <a href="#optnoroot">--no-root</a>
+                <a href="#optskipclean">--skip-clean</a>
+                <a href="#optskipintegrity">--skip-integrity</a>
+                <a href="#optmegabytes">--megabytes</a>
+                <a href="#optnoerrexit">--no-errexit</a>
+                <a href="#optskipdesc">--skip-description</a>
+                <a href="#optskipinst">--skip-installed</a>
+                <a href="#optwithdest">--with-dest</a>
+                <a href="#optconfig">--config</a>
+                <a href="#optbuildonly">--build-only</a>
+            </div>
+            <h3 class="topics">Configuration file</h3>
+			<a class="subtopic" href="#cfgintro">Introduction</a>
+            <a class="subtopic ssubtopic" href="#cfgvar">Valid variables</a>
+            <div class="subtopic-content">
+                <a href="#opvar">Operation variables</a>
+                <a href="#pathvar">Path variables</a>
+            </div>
+            <h3 class="topics">Path variables</h3>
+			<a class="subtopic" href="#pvintro">Introduction</a>
+			<a class="subtopic" href="#pv_pkgrepo">PKG Repo path</a>
+            <a class="subtopic" href="#pathvars_db">DB Path</a>
+            <a class="subtopic" href="#pathvars_cache">Cache Path</a>
+            <a class="subtopic" href="#pathvars_prefix">Prefix</a>
+            <a class="subtopic" href="#pathvars_dest">Dest</a>
         </div>
     </nav>
     <main>
         <h1 class="intro">
-        	documentation for package manager
+		    documentation for package manager
         </h1>
         <br>
         <div class="bigheaders">
             <h1>Introduction</h1>
         </div>
-        <h2 class="headers">
+        <h2 class="headers" id="abtpm">
         	About this package manager
         </h2>	
         <p class="para">This is a package manager made for Linux From Scratch for solving the issue of upgrading of packages and dependency hell, not to be intended to be used with real distros. I know most of the code is unoptimized but hey it works. This package manager is purely written in bash script and is made by one person and no AI. Inspired by pacman and portage</p>
-        <br>
-        <div class="cont">
+        <h2 class="headers" id="contri">Contributing</h2>	
+	<p class="para">If you care to contribute, it would help alot if you contribute in fixing small bugs and expanding the package repository. Theres like 200+ packages built in LFS which would be a pain for me</h2>
+		<br><br>
+        <div class="cont" id="feat">
             <div><h1 class="headers">Features</h1></div>
             <div>Can install packages</div>
             <div>Can uninstall packages</div>
@@ -60,25 +176,25 @@
             <div>Allows you to run test suites</div>
             <div>Confirmation prompts</div>
             <div>Information related to disk spaces</div>
+            <div>Can detect circular dependencies</div>
             <div class="corner">
             </div>
         </div>
         <br>
-        <div class="cont">
+        <div class="cont" id="disabil">
             <div><h1 class="headers">What it cannot do</h1></div>
             <div>Run hooks</div>
             <div>Do rollbacks</div>
             <div>Resolve conflicts</div>
             <div>Use multiple repos</div>
             <div>Use helpers</div>
-            <div>Resolve circular dependencies</div>
             <div>
                 <div class="corner">
                 </div>
             </div>
         </div>
         <br>
-        <h1 class="bigheaders">
+        <h1 class="bigheaders" id="instpm">
             Installing the package manager
         </h1>
         <br>
@@ -103,66 +219,66 @@
         <h1 class="bigheaders">
             Getting started
         </h1><br>
-        <p class="para">Here are the operations you can do with the package manager: </p><br>
+        <p class="para" id="basicops">Here are the operations you can do with the package manager: </p><br>
         <ul>
-            <li style="margin-bottom: 7px;"><b class="code">unveil</b> : This action is used to <i class="special-word">install</i> a new package into the system, or <i>DEST</i> specified by the user</li>
-            <li style="margin-bottom: 7px;"><b class="code">veil</b> : This action is used to <i class="special-word">uninstall</i> a package from the system <i style="color: var(--danger)">permanently</i></li>
-            <li style="margin-bottom: 7px;"><b class="code">strengthen</b> : This action is used to <i class="special-word">update</i> all the packages <i>installed</i> on the system</li>
-            <li style="margin-bottom: 7px;"><b class="code">search</b> : This action can be used to <i class="special-word">search</i> packages or package on the <i>sync database</i></li>
-            <li style="margin-bottom: 7px;"><b class="code">help</b> : This action is used to display <i class="special-word">summarised information</i> about using the package manager</li>
-            <li style="margin-bottom: 7px;"><b class="code">info</b> : This action is used to display the version, name and description of a package or packages which are/is <i class="special-word">installed</i> on the system</li>
-            <li style="margin-bottom: 7px;"><b class="code">version</b> : This action is used to display the <i class="special-word">version</i> of the package manager</i></li>
-            <li style="margin-bottom: 7px;"><b class="code">rmpkg</b> : This action can be used to <i style="color: var(--danger)">delete</i> all the occurences of the specified package(s) <i class="special-word">in the cache directory</i></li>
-            <li style="margin-bottom: 7px;"><b class="code">pkgs</b> : This action is used to list the <i class="special-word">number of packages installed</i>. Useful for other programs like fetch programs on the system</li>
-            <li style="margin-bottom: 7px;"><b class="code">list</b> : This action is used to list the names of all of the <i class="special-word">packages installed</i>. Useful for other programs like fetch programs on the system</li>
+            <li style="margin-bottom: 7px;"><b id="unveil" class="code">unveil</b> : This action is used to <i class="special-word">install</i> a new package into the system, or <i>DEST</i> specified by the user</li>
+            <li style="margin-bottom: 7px;"><b id="veil" class="code">veil</b> : This action is used to <i class="special-word">uninstall</i> a package from the system <i style="color: var(--danger)">permanently</i></li>
+            <li style="margin-bottom: 7px;"><b id="strengthen" class="code">strengthen</b> : This action is used to <i class="special-word">update</i> all the packages <i>installed</i> on the system</li>
+            <li style="margin-bottom: 7px;"><b id="search" class="code">search</b> : This action can be used to <i class="special-word">search</i> packages or package on the <i>sync database</i></li>
+            <li style="margin-bottom: 7px;"><b id="help" class="code">help</b> : This action is used to display <i class="special-word">summarised information</i> about using the package manager</li>
+            <li style="margin-bottom: 7px;"><b id="info" class="code">info</b> : This action is used to display the version, name and description of a package or packages which are/is <i class="special-word">installed</i> on the system</li>
+            <li style="margin-bottom: 7px;"><b id="version" class="code">version</b> : This action is used to display the <i class="special-word">version</i> of the package manager</i></li>
+            <li style="margin-bottom: 7px;"><b id="rmpkg" class="code">rmpkg</b> : This action can be used to <i style="color: var(--danger)">delete</i> all the occurences of the specified package(s) <i class="special-word">in the cache directory</i></li>
+            <li style="margin-bottom: 7px;"><b id="pkgs" class="code">pkgs</b> : This action is used to list the <i class="special-word">number of packages installed</i>. Useful for other programs like fetch programs on the system</li>
+            <li style="margin-bottom: 7px;"><b id="list" class="code">list</b> : This action is used to list the names of all of the <i class="special-word">packages installed</i>. Useful for other programs like fetch programs on the system</li>
         </ul>
         <br>
         <h1 class="bigheaders">Installing a package</h1>
         <br>
-        <p class="para">To install a package, you must run <b class="code">sudo Veiler unveil [PKGNAME] [OPTIONS]</b></p>
+        <p class="para" id="instpkg">To install a package, you must run <b class="code">sudo Veiler unveil [PKGNAME] [OPTIONS]</b></p>
         <br>
         <p class="para">Example packages can be acl, gettext, neofetch, which, bash, etc. Please note that the build scripts for these packages must be formatted correctly else it will perform wrong instructions</p>
-        <h2 class="headers">Using the options</h2>
+        <h2 class="headers" id="opts">Using the options</h2>
         <br>
         <ul>
-            <li><b class="code">--quiet:</b> This option makes the package manager output way less verbose information while building and installing the packages. Normally the package manager will output very verbose messages, with this option, <i style="color: var(--cool-yellow)">unimportant messages are supressed.</i> For example, <b class="code">Make check</b> outputs alot of messages as test suites are quite large, so with --quiet there will be comparitively less messages</li><br>
-        <li><b class="code">--ask:</b> This option gives a <i style="color: var(--cool-yellow)">confirmation prompt</i> before performing an installation, system upgrade or uninstallation. You can use this to see what packages are being updated, how much disk space is required and what dependencies are being installed before being directly taken to the build process</li><br>
-        <li><b class="code">--documentation:</b> This option allows the installation of documentation for <i style="color: var(--cool-yellow)">all packages</i>. This option exists to reduce bloat on the system, although some documentation we actually do use frequently, like for coreutils.</li><br>
+            <li><b class="code" id="optquiet">--quiet:</b> This option makes the package manager output way less verbose information while building and installing the packages. Normally the package manager will output very verbose messages, with this option, <i style="color: var(--cool-yellow)">unimportant messages are supressed.</i> For example, <b class="code">Make check</b> outputs alot of messages as test suites are quite large, so with --quiet there will be comparitively less messages</li><br>
+        <li><b class="code" id="optask">--ask:</b> This option gives a <i style="color: var(--cool-yellow)">confirmation prompt</i> before performing an installation, system upgrade or uninstallation. You can use this to see what packages are being updated, how much disk space is required and what dependencies are being installed before being directly taken to the build process</li><br>
+        <li><b class="code" id="optdoc">--documentation:</b> This option allows the installation of documentation for <i style="color: var(--cool-yellow)">all packages</i>. This option exists to reduce bloat on the system, although some documentation we actually do use frequently, like for coreutils.</li><br>
             <div class="note">
             <div>Note </div>
                 <p>Man pages and info files are counted as documentation.</p>
             </div>
         <br>
-        <li><b class="code">--test:</b> This <i style="color: var(--cool-yellow)">runs test suites after building a package</i> ( if supported ). Test suites take really long and fail often so the package manager does not run them by default. You can if you want to though, its good to check if a package has been built correctly and properly </li><br>
-        <li><b class="code">--no-root:</b> This option <i style="color: var(--cool-yellow)">won't ask you to become a root user.</i> You can use this option in pair with the <b>--with-dest</b> option to build and install packages whose final files will be owned by the current user. If you try to use this option and the <b>$VEILERDEST</b> variable contains a priveledged directory, then you will likely hit permission denied errors at the end. Also make sure that all the tarballs which will end up in <b>$VEILERCACHEPATH</b> will be readable and writable by the current user. Otherwise you will hit errors while extracting the build tarballs. Or use a different $VEILERCACHEPATH as an unpriveledged directory<br>Also note that the files in <b>$VEILERDBPATH</b> should also atleast be readable, but not writable ( usually )</li><br>
-        <li><b class="code">--skip-clean:</b> This option <i style="color: var(--cool-yellow)">does not delete every cached directory of a package</i>, before performing installation, uninstallation or system upgrade again.<br>In other words, this will cause the package manager to keep the files which were downloaded in the build directory. This can be useful when you are building a package but the integrity for the build script or the source tarball could not be verified. So if the package integrity for the build script failed you can still keep the source tarball ( or you can use <b>--skip-integrity</b> option to not verify package integrity. Note that sometimes this can cause dirty builds</li><br>
-        <li><b class="code">--skip-integrity:</b> Using this option, <i style="color: var(--cool-yellow)">you can choose to not verify package integrity for a package</i>. If you think the package provider is trusted and the build script is valid, then you can use this option incase integrity verification failed. Please note that this will make the package manager trust the buildscript and the source tarball 100%. You can also choose to skip integrity incase the package maintainer ( me ) failed to update checksums after updating the build script.</li><br>
+        <li><b class="code" id="opttest">--test:</b> This <i style="color: var(--cool-yellow)">runs test suites after building a package</i> ( if supported ). Test suites take really long and fail often so the package manager does not run them by default. You can if you want to though, its good to check if a package has been built correctly and properly </li><br>
+        <li><b class="code" id="optnoroot">--no-root:</b> This option <i style="color: var(--cool-yellow)">won't ask you to become a root user.</i> You can use this option in pair with the <b>--with-dest</b> option to build and install packages whose final files will be owned by the current user. If you try to use this option and the <b>$VEILERDEST</b> variable contains a priveledged directory, then you will likely hit permission denied errors at the end. Also make sure that all the tarballs which will end up in <b>$VEILERCACHEPATH</b> will be readable and writable by the current user. Otherwise you will hit errors while extracting the build tarballs. Or use a different $VEILERCACHEPATH as an unpriveledged directory<br>Also note that the files in <b>$VEILERDBPATH</b> should also atleast be readable, but not writable ( usually )</li><br>
+        <li><b class="code" id="optskipclean">--skip-clean:</b> This option <i style="color: var(--cool-yellow)">does not delete every cached directory of a package</i>, before performing installation, uninstallation or system upgrade again.<br>In other words, this will cause the package manager to keep the files which were downloaded in the build directory. This can be useful when you are building a package but the integrity for the build script or the source tarball could not be verified. So if the package integrity for the build script failed you can still keep the source tarball ( or you can use <b>--skip-integrity</b> option to not verify package integrity. Note that sometimes this can cause dirty builds</li><br>
+        <li><b class="code" id="optskipintegrity">--skip-integrity:</b> Using this option, <i style="color: var(--cool-yellow)">you can choose to not verify package integrity for a package</i>. If you think the package provider is trusted and the build script is valid, then you can use this option incase integrity verification failed. Please note that this will make the package manager trust the buildscript and the source tarball 100%. You can also choose to skip integrity incase the package maintainer ( me ) failed to update checksums after updating the build script.</li><br>
         <div class="note">
             <div>Note </div>
             <p>This package manager does not really focus alot of security, but more on downloading non-corrupted files which are valid. But still this can raise a security issue</p>
         </div>
         <br>
-        <li><b class="code">--megabytes:</b> If this option is enabled, the <i class="special-word">sizes will be displayed in megabytes ( MiB )</i> instead of kilobytes ( KiB ). Those "sizes" are the sizes related to disk space required, download size, installed size, installed size without documentation and upgrade sizes</li><br>
-        <li><b class="code">--skip-deps:</b> This option will make the package manager <i class="special-word">not resolve any dependencies for the package</i>, including optional dependencies. So <i style="color: var(--cool-yellow)">incase the package manager failed to resolve the dependencies of a package properly</i>, then you can use this option to manually make the package manager assume there are already dependencies installed on the system. However, it is advised to let the package manager resolve dependencies if it can, else you will hit errors at the configure stage</li><br>
-        <li><b class="code">--no-errexit:</b> Using this option, you can choose to <i class="special-word">skip exiting upon errors encountered</i> during buildtime and installtime ONLY</li><br>
-        <li><b class="code">--skip-description:</b> Using this option along with the <i class="special-word">search</i> operation, you can tell the package manager to only search for packages in the sync database by names, and not by matching the description and the name itself.</li>
+        <li><b class="code" id="optmegabytes">--megabytes:</b> If this option is enabled, the <i class="special-word">sizes will be displayed in megabytes ( MiB )</i> instead of kilobytes ( KiB ). Those "sizes" are the sizes related to disk space required, download size, installed size, installed size without documentation and upgrade sizes</li><br>
+        <li><b class="code" id="optskipdeps">--skip-deps:</b> This option will make the package manager <i class="special-word">not resolve any dependencies for the package</i>, including optional dependencies. So <i style="color: var(--cool-yellow)">incase the package manager failed to resolve the dependencies of a package properly</i>, then you can use this option to manually make the package manager assume there are already dependencies installed on the system. However, it is advised to let the package manager resolve dependencies if it can, else you will hit errors at the configure stage</li><br>
+        <li><b class="code" id="optnoerrexit">--no-errexit:</b> Using this option, you can choose to <i class="special-word">skip exiting upon errors encountered</i> during buildtime and installtime. Errors like downloading errors or invalid variable value errors will still cause the package manager to exit. Also you can skip exiting if you have insufficient disk space ( but its not advised to do so )</li><br>
+        <li><b class="code" id="optskipdesc">--skip-description:</b> Using this option along with the <i class="special-word">search</i> operation, you can tell the package manager to only search for packages in the sync database by names, and not by matching the description and the name itself.</li>
         <h2>Example case</h2>
-        <p>Lets say you want to search the package "which" in the package managers's database, and by name only not description. If you omit <b>--skip-description</b> then the package manager will also search the arguments you provided to it in the packages's descriptions.</p>
+        <p class="para">Lets say you want to search the package "which" in the package managers's database, and by name only not description. If you omit <b>--skip-description</b> then the package manager will also search the arguments you provided to it in the packages's descriptions.</p>
         <br>
-        <li><b class="code">--skip-installed:</b> This option will make the package manager <i class="special-word">skip installing the packages which are already installed on the system</i>. Suppose you want to install the following packages: <i class="special-word">which bash neofetch fastfetch</i>. And you already have neofetch installed and you want to skip building and installing the packages which are already installed on the system. Then in that case you can use <b>--skip-installed</b> option to skip building packages which are already installed, which in this case will make the package manager install the following: <i class="special-word">which bash fastfetch</i></li><br>
-        <li><b class="code">--with-dest:</b> This option requires an additional argument to be used. Using this option, you can choose to <i class="special-word">install packages in a custom directory</i> instead of the default directory /. Note that argument provided to this option must be an <i class="special-word">absolute path</i>, otherwise it can cause issues at install time.</li><br>
-        <li><b class="code">--config:</b> This option also requires an additional argument to be used. Using this option, you can choose to <i class="special-word">use a custom configuration file</i> instead of the default configuration file <i class="special-word">/etc/Veiler/veiler.conf</i>. Note that argument provided to this option must be an <i class="special-word">absolute path</i>.</li><br>
-        <li><b class="code">--build-only:</b> This option is used to skip the installation of a package, and <i class="special-word">only build a package</i>. Useful for custom installations</b> 
+        <li><b class="code" id="optskipinst">--skip-installed:</b> This option will make the package manager <i class="special-word">skip installing the packages which are already installed on the system</i>. Suppose you want to install the following packages: <i class="special-word">which bash neofetch fastfetch</i>. And you already have neofetch installed and you want to skip building and installing the packages which are already installed on the system. Then in that case you can use <b>--skip-installed</b> option to skip building packages which are already installed, which in this case will make the package manager install the following: <i class="special-word">which bash fastfetch</i></li><br>
+        <li><b class="code" id="optwithdest">--with-dest:</b> This option requires an additional argument to be used. Using this option, you can choose to <i class="special-word">install packages in a custom directory</i> instead of the default directory /. Note that argument provided to this option must be an <i class="special-word">absolute path</i>, otherwise it can cause issues at install time.</li><br>
+        <li><b class="code" id="optconfig">--config:</b> This option also requires an additional argument to be used. Using this option, you can choose to <i class="special-word">use a custom configuration file</i> instead of the default configuration file <i class="special-word">/etc/Veiler/veiler.conf</i>. Note that argument provided to this option must be an <i class="special-word">absolute path</i>.</li><br>
+        <li><b class="code" id="optbuildonly">--build-only:</b> This option is used to skip the installation of a package, and <i class="special-word">only build a package</i>. Useful for custom installations</b> 
         </ul><br>
         <h1 class="bigheaders" id="configfile">Using the configuration file</h1><br>
-        <h2 class="headers">Introduction</h2>
+        <h2 class="headers" id="cfgintro">Introduction</h2>
         <p class="para">You will find the configuration file for Veiler at /etc/Veiler/veiler.conf after installing the package manager. You can use the configuration file to set default options everytime you perform an action with the package manager instead of having to use commandline options again and again</p>
-        <h2 class="headers">Variables</h2>
+        <h2 class="headers" id="cfgvar">Variables</h2>
         <h3 class="headers" style="font-size: 20px; font-weight: 400"> A table of variables which are valid </h3>
         <br>
         <div class="overflowmask">
         <table>
-            <tr class="op"><th colspan="4">Operation variables</th></tr>
+            <tr id="opvar" class="op"><th colspan="4">Operation variables</th></tr>
             <tr class="heading"><th>Name</th><th>Type</th><th>Purpose</th><th>Usage</th></tr>
             <tr><td>VEILERQUIET</td><td rowspan="12" style="padding-right: 25px;padding-left: 25px;">Boolean</td><td>To enable or disable quiet mode</td><td rowspan="12" style="text-align: center">Set to 0 or 1</td></tr>
             <tr><td>VEILERTESTS</td><td>To enable or disable running test suites</td></tr>
@@ -176,19 +292,22 @@
             <tr><td>VEILERSKIPINST</td><td>To enable or disable skipping building packages which are already installed</td></tr>
             <tr><td>VEILERSKIPDESC</td><td>To enable or disable matching arguments provided to search with package descriptions too</td></tr>
             <tr><td>VEILERNOROOT</td><td>To enable or disable needing superuser priveledges for building packages</td></tr>
-            <tr class="op"><th colspan="4">Path variables</th></tr>
+            <tr id="pathvar" class="op"><th colspan="4">Path variables</th></tr>
             <tr class="heading"><th>Name</th><th>Type</th><th>Description</th><th>Usage</th></tr>
             <tr><td>VEILERDEST</td><td rowspan="6" style="padding: 0px 0px 25px 25px;">String</td><td>This variable contains the final destination where packages will be installed. Default value is <i class="special-word">/ ( root directory ).</i> Changing it will require it to be an absolute path, otherwise package manager will break<td>Provide an absolute path to the directory you want to install packages into. Example: <i class="special-word">/home/LFS/Dest</i></td></tr>
-            <tr><td>PKGREPO</td><td>This variable contains the URL of the package repository ( https, ftp, http ). Default value is <a class="special-word" href="https://ilovetrees242.github.io/Supplements/Website/Packages">https://ilovetrees242.github.io/Supplements/Website/Packages</a></td><td>Set the value of this variable to be a valid URL to the package repository you want to use. See <a href="#pathvars_pkgrepo" class="special-word">PKG Repo path</a> for more information</td></tr>
+            <tr><td>PKGREPO</td><td>This variable contains the URL of the package repository ( https, ftp, http ). Default value is <a class="special-word" href="https://ilovetrees242.github.io/Supplements/Website/Packages">https://ilovetrees242.github.io/Supplements/Website/Packages</a></td><td>Set the value of this variable to be a valid URL to the package repository you want to use. See <a href="#pv_pkgrepo" class="special-word">PKG Repo path</a> for more information</td></tr>
             <tr><td>VEILERCACHEPATH</td><td>This variable contains an absolute path to the cache path of the package manager. Default value is <i class="special-word">/var/cache/Veiler</i> See <a class="special-word" href="#pathvars_vcache">Cache Path</a> for more information.</td><td>Set an absolute path to the directory you want to use as an cache directory. <b class="danger-word">WARNING: </b> If you use a non empty directory, like your users home directory then <i class="danger-word">EVERY</i> directory inside that directory will be <i class="danger-word">deleted</i> if <i class="special-word">$VEILERSKIPCLEAN</i> is set to 0</td></tr>
-            <tr><td>VEILERDBPATH</td><td>This variable contains an absolute path to the database of the package manager. The package manager uses this database to get information related to packages, like their name, version, source, etc. See <a class="special-word" href="#pathvars_vdb">DB Path</a> for more information. Using an empty directory as the DBPATH will make the package manager "confused" ( as it will have nowhere to get data from ). Default value is <i class="special-word">/var/db/Veiler</i></td><td>To use this, make sure the DB directory exists, and has the subdirectories local and sync with package entries as directories. Set an absolute path to the database you want to use.</td></tr>
+            <tr><td>VEILERDBPATH</td><td>This variable contains an absolute path to the database of the package manager. The package manager uses this database to get information related to packages, like their name, version, source, etc. See <a class="special-word" href="#pathvars_db">DB Path</a> for more information. Using an empty directory as the DBPATH will make the package manager "confused" ( as it will have nowhere to get data from ). Default value is <i class="special-word">/var/db/Veiler</i></td><td>To use this, make sure the DB directory exists, and has the subdirectories local and sync with package entries as directories. Set an absolute path to the database you want to use.</td></tr>
             <tr><td>VEILERCONFIGPATH</td><td>This variable contains an absolute path to the configuration file for Veiler. Though it would not make sense to have the path to the configuration file inside the configuration file. This variable is set inside the package manager to <i class="special-word">/etc/Veiler/veiler.conf</i>. You can use another configuration file using the <b>--config</b> option.<td>To use this, do not set this variable inside any existing configuration file, but pass the path to it manually through command line, or you can change it inside the package manager</tr>
 	    <tr><td>VEILERPREFIX</td><td>This variable contains an absolute path to the prefix under which packages should be installed. By default its set to <i class="special-word">/usr</i> but you can change it to something like <i class="special-word">/usr/local</i>. Under your <b>$VEILERDEST</b>, the prefix will be created. Use this for non system-wide installations or custom installations.</td><td>To use this, simply change the value to the directory you would like as your prefix, example: <i class="special-word">/usr/local</i>. Again this must be an absolute path in order to work correctly.</tr>
         </table>
         </div>
     <br>
     <h1 class="bigheaders">Path variables</h1><br>
-    <h2 class="headers" id="pathvars_pkgrepo">PKG Repo path</h2><br>
+	<h3 class="mheaders">Introduction</h3> 
+	<p class="para" id="pvintro">This section will contain information about the path variables, which affect the usage of certain directories by the package manager. These variables are simply just path to directories with a special purpose</p>
+	<br>
+    <h2 class="headers" id="pv_pkgrepo">PKG Repo path</h2><br>
 	<h3 class="mheaders">Introduction</h3><br>
 	<p class="para">PKG Repo path basically contains the URL to the package hosting repository. The package manager uses wget to download files from the internet through the https. The hosting package repository must contain to things:</p><br>
 	<ul>
@@ -205,7 +324,7 @@
         <p class="para">[PKGNAME] and [PKGVERSION] should match MOONPKGNAME and MOONPKGVERSION in the <i class="special-word">info</i> file in the database of the package manager</i>
     </div>
     <br>
-    <h2 class="headers" id="pathvars_vdb">DB Path</h2><br>
+    <h2 class="headers" id="pathvars_db">DB Path</h2><br>
 	<h3 class="mheaders">Introduction</h3><br>
     <p class="para">The DB path is the database of the package manager, non-sql which lives on the filesystem. Instead of SQL or JSON to query data, the package manager queries a package entry in <i class="special-word">$VEILERDBPATH/sync</i>. If the package is not found, the package manager will exit with an error. Otherwise, it will proceed with the installation. Each package entry mainly contains 5 files: </p><br>
     <ul>
@@ -231,11 +350,32 @@
         <p class="para">Here's an example from htop: <b class="code">+SENSORS lm-sensors</b></p>
         <li style="margin-bottom: 8px"><b class="code">testdependencies</b> Dependencies which are required for running test suites. If you have --tests option disabled then this file is not read.</li>
         <li style="margin-bottom: 8px"><b class="code">additionaldownloads</b> Contains additional download for the package. Could be documentation tarball, extra modules, etc. For example, Tcl ships its seperately from the source, or even python.</b>
+        <br><br>
+        <h3 class="mheaders">How to use</h3>
         <br>
-        <h2 class="headers">How to use</h2>
-        <br>
-        <p class="para">Using DB Path is very simple. You can use any accessible directory as the DB and then you can create package entries in sync, and then you just have to create the above listed files in each of the entries. Entries are directories by the way. Local directory will be just a duplicate of sync which will be used to keep track of installed packages.</p>
+        <p class="para">Using DB Path is very simple. You can use any accessible directory as the DB and then you can create package entries in sync, and then you just have to create the above listed files in each of the entries. Entries are directories by the way. Local directory will be just a duplicate of sync which will be used to keep track of installed packages. If the package you provide to the package manager to install does not exist under the sync directory then an error will be thrown. Empty dependencies file means no dependencies</p>
+        <h2 class="headers" id="pathvars_cache">Cache Path</h2>
+        <h3 class="mheaders" style="padding: 5px 0px 5px 0px;">Introduction</h3>
+        <p class="para">The cache path is simply an absolute path to the directory which should contain all the downloaded build tarballs. The tarballs are stored in this directory for later use, and you can delete them with the package manager's operations: <i style="color: var(--danger)">rmpkg</i> and <i style="color: var(--danger)">clearcache</i>. Note that these contain the package source ( if integrity verification was successful ) which causes them to be large in size</p>
+        <h3 class="mheaders" style="padding: 5px 0px 5px 0px;">/var/cache/Veiler vs x directory</h3>
+        <p class="para">/var/cache/Veiler is the default cache directory which is owned by the build user and is not writable by other users. Meanwhile, if you are using x directory for cache, it should usually be paired with <i class="special-word">--no-root</i> because it may not be writable by the build user. Use this if you want to build packages as your user.</p>
+        <h3 class="mheaders" style="padding: 5px 0px 5px 0px;">How to use</h3>
+        <p class="para">To use cache path, simply ensure it is writable and accessible by your user. And then all the downloads will be stored here. You can use something like /tmp, or /home/user/.cache/veiler.</p>
+        <h2 class="headers" id="pathvars_prefix">Prefix</h2>
+        <h3 class="mheaders" style="padding: 5px 0px 5px 0px;">Introduction</h3>
+        <p class="para">Prefix is the directory under which packages will be installed. By default it is set to <i class="special-word">/usr</i> because it is the directory which is tracked by the system's package manager. You can change it to something like <i class="special-word">/usr/local</i> for site installations.</p>
+        <h3 class="mheaders" style="padding: 5px 0px 5px 0px;">How to use</h3>
+	<p class="para">For using this, you need the prefix to be an absolute path to a directory which exists. So under the prefix you use, the packages will install their files under it.</p>
+        <h2 class="headers" id="pathvars_dest">Dest</h2>
+        <h3 class="mheaders" style="padding; 5px 0px 5px 0px;">Introduction</h3>
+        <p class="para">Dest is a special absolute path to a directory <i class="special-word">where the package will be installed.</i> This is very useful for custon installations or test installations. You can use this when you don't want to install something directly to your main root filesystem</p>
+        <h3 class="mheaders" style="padding: 5px 0px 5px 0px">How to use</h3>
+        <p class="para">Usage is very simple, just use <i class="special-word">$VEILERDEST</i> or <i class="special-word">--with-dest</i>. --with-dest requires an argument to the absolute path of the destination directory.</p>
     </ul>
     </main>
+    <footer>
+        <p>&copy; 2026 CoolWeb</a></p>
+        <p>Contact me: <a href="mailto:riyrty594@gmail.com">riyrty594@gmail.com</a></p>
+    </footer>
 </body>
 </html>

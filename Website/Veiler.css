@@ -24,6 +24,54 @@ li {
     margin-bottom: 3px;
     width: 70%;
 }
+.contents {
+    background-color: var(--black);
+    height: 40%;
+    width: calc( 100% - 25px );
+    margin-left: 12.5px;
+    overflow: scroll;
+}
+.contents .topics {
+    background-color: var(--cool-dark-white);
+    color: var(--black);
+    padding: 10px 25px 10px 25px;
+    max-width: 100%;
+    height 50px;
+}
+.contents .subtopic {
+    padding: 10px 25px 10px 25px;
+    background: none;
+    background-color: var(--dark-gray);
+    background-position: 0px;
+    transition: 2s ease;
+    text-align: left;
+}
+.contents .subtopic-content {
+    width: 100%;
+    display: none;
+}
+.contents .subtopic-content a {
+    height: 20px;
+    padding: 5px 50px 5px 50px;
+    text-align: left;
+    background: #191919;
+}
+.contents .subtopic:hover, .contents .subtopic-content a:hover {
+    background: linear-gradient(var(--light-gray), var(--light-gray));
+    cursor: pointer;
+}
+.contents .subtopic:hover + div, .contents .subtopic-content:has(a:hover) {
+    display: block
+}
+.contents .ssubtopic:hover:after, .contents:has(.subtopic-content a:hover) .ssubtopic:after {
+    transform: rotate(90deg);
+}
+.ssubtopic:after {
+    content: '>';
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px
+}
 .intro {
     background: var(--cool-dark-white);
     color: var(--white);
@@ -154,6 +202,20 @@ td {
 table {
     border-collapse: collapse
 }
+footer {
+    margin-top: 250px;
+    background-color: var(--black);
+    padding: 25px;
+    width: calc(100% - 21vw);
+    margin-left: 21vw;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer p{
+    color: white;
+}
 .op {
     background-color: var(--cool-dark-white);
 }
@@ -170,8 +232,11 @@ table {
 } 
 .special-word {
     font-weight: 700;
-    color: var(--white);
+    color: #a6a69c;
 } 
+.mob-nav-panel .contents {
+    margin-top: 5px;
+}
 @media all and (max-width: 830px) {
     .intro {
         font-size: 50px;
@@ -179,5 +244,9 @@ table {
     }
     main {
         margin-left: 0px
+    }
+    footer {
+        width: auto;
+        margin-left: 0px;
     }
 }
