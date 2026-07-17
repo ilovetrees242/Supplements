@@ -1,0 +1,31 @@
+--- ./src/modules/packages/packages.c	2026-07-16 20:20:15.212050433 +0530
++++ ./src/modules/packages/p.orig	2026-07-16 20:20:31.236061130 +0530
+@@ -3,6 +3,7 @@
+ #include "common/strutil.h"
+ #include "detection/packages/packages.h"
+ #include "modules/packages/packages.h"
++#include <dirent.h>
+ 
+ bool ffPrintPackages(FFPackagesOptions* options) {
+     FFPackagesResult counts = {};
+@@ -114,6 +115,20 @@
+             }
+             ffStrbufAppendS(&output, ", ");
+         };
++
++        struct dirent *entry;
++        DIR *dp = opendir("/var/db/Veiler/local");
++        uint32_t pkg_veiler_count = 0;
++
++        if ( dp == NULL ) return 1;
++        while ((entry = readdir(dp))) {
++            if (entry->d_name[0] != '.' && entry->d_type == DT_DIR) pkg_veiler_count++;
++        }
++        if ( pkg_veiler_count > 0 ) {
++            ffStrbufAppendF(&output, "%u (veiler)", pkg_veiler_count);
++            ffStrbufAppendS(&output, ", ");
++        }
++
+         FF_PRINT_PACKAGE(pacstall)
+         FF_PRINT_PACKAGE(paludis)
+         FF_PRINT_PACKAGE(pisi)

@@ -1,0 +1,20 @@
+#!/bin/bash
+source "$VEILERDBPATH/sync/cmake/info"
+trap 'echo -e "${BLUE}Interrupted. Goodbye!${NC}"; exit 1' INT && set -e
+case $1 in
+    build)
+        # configure command goes here
+        sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake &&
+        ./bootstrap --prefix=$VEILERPREFIX --system-libs --mandir=/share/man --no-system-jsoncpp --no-system-cppdap --no-system-librhash --docdir=/share/doc/$MOONPKG &&
+        # build command goes here
+        make
+        if [ $VEILERTESTS -eq 1 ]; then
+            bin/ctest -j$MAKEFLAGS
+        fi
+    ;;
+    install)
+        # install command goes here
+        make DESTDIR=$PWD/DEST install
+    ;;
+esac
+set +e
