@@ -1,5 +1,5 @@
---- ./src/modules/packages/packages.c.orig	2026-07-21 17:44:26.829413468 +0530
-+++ ./src/modules/packages/packages.c	2026-07-21 17:45:49.265246318 +0530
+--- ./src/modules/packages/p.c	2026-07-22 23:06:38.399859937 +0530
++++ ./src/modules/packages/packages.c	2026-07-22 23:11:58.009041361 +0530
 @@ -3,6 +3,7 @@
  #include "common/strutil.h"
  #include "detection/packages/packages.h"
@@ -8,18 +8,13 @@
  
  bool ffPrintPackages(FFPackagesOptions* options) {
      FFPackagesResult counts = {};
-@@ -10,12 +11,24 @@
+@@ -10,12 +11,19 @@
  
      const char* error = ffDetectPackages(&counts, options);
  
 +    struct dirent *entry;
-+    DIR *dp = opendir("/var/db/Veiler/local");
-+    uint32_t pkg_veiler_count = 0;
++    uint32_t pkg_veiler_count = system("Veiler pkgs");
 +
-+    if ( dp == NULL ) return 1;
-+    while ((entry = readdir(dp))) {
-+        if (entry->d_name[0] != '.' && entry->d_type == DT_DIR) pkg_veiler_count++;
-+    }
 +    if ( pkg_veiler_count > 0 ) {
 +        counts.veiler = pkg_veiler_count;
 +    }
@@ -34,7 +29,7 @@
          ffPrintError(FF_PACKAGES_MODULE_NAME, 0, &options->moduleArgs, FF_PRINT_TYPE_DEFAULT, "No packages from known package managers found");
          return false;
      }
-@@ -114,6 +127,7 @@
+@@ -114,6 +122,7 @@
              }
              ffStrbufAppendS(&output, ", ");
          };
@@ -42,7 +37,7 @@
          FF_PRINT_PACKAGE(pacstall)
          FF_PRINT_PACKAGE(paludis)
          FF_PRINT_PACKAGE(pisi)
-@@ -135,6 +149,7 @@
+@@ -135,6 +144,7 @@
          FF_PRINT_PACKAGE(sorcery)
          FF_PRINT_PACKAGE(winget)
          FF_PRINT_PACKAGE(xbps)
@@ -50,13 +45,3 @@
  
          assert(output.length >= 2); // counts.all > 0 guarantees that at least one package count was printed, which guarantees that ", " was appended at least once
          ffStrbufSubstrBefore(&output, output.length - 1);
---- ./src/detection/packages/packages.h.orig	2026-07-21 17:47:25.383643067 +0530
-+++ ./src/detection/packages/packages.h	2026-07-21 17:47:44.234201712 +0530
-@@ -50,6 +50,7 @@
-     uint32_t sorcery;
-     uint32_t winget;
-     uint32_t xbps;
-+    uint32_t veiler;
- 
-     uint32_t all; // Make sure this goes last
- 
