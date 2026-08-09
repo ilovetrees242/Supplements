@@ -1,0 +1,466 @@
+/* config.h.  Generated from config.h.in by configure.  */
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define if account management tools should be installed setuid and
+   authenticate the callers */
+/* #undef ACCT_TOOLS_SETUID */
+
+/* Define to support lastlog. */
+/* #undef ENABLE_LASTLOG */
+
+/* Define to manage session support with logind. */
+#define ENABLE_LOGIND 1
+
+/* Define to 1 if translation of program messages to the user's native
+   language is requested. */
+#define ENABLE_NLS 1
+
+/* Define to support the subordinate IDs. */
+#define ENABLE_SUBIDS 1
+
+/* Path for faillog file. */
+#define FAILLOG_FILE "/var/log/faillog"
+
+/* max group name length */
+#define GROUP_NAME_MAX_LENGTH 32
+
+/* Define to 1 if you have the declaration of 'pam_fail_delay' */
+#define HAS_PAM_FAIL_DELAY 1
+
+/* Defined to 1 if you have the declaration of 'secure_getenv' */
+#define HAS_SECURE_GETENV 1
+
+/* Define to 1 if you have the <acl/libacl.h> header file. */
+#define HAVE_ACL_LIBACL_H 1
+
+/* Define to 1 if you have the 'arc4random_buf' function. */
+#define HAVE_ARC4RANDOM_BUF 1
+
+/* Define to 1 if you have the <attr/error_context.h> header file. */
+#define HAVE_ATTR_ERROR_CONTEXT_H 1
+
+/* Define to 1 if you have the <attr/libattr.h> header file. */
+#define HAVE_ATTR_LIBATTR_H 1
+
+/* Define to 1 if you have the Mac OS X function CFLocaleCopyCurrent in the
+   CoreFoundation framework. */
+/* #undef HAVE_CFLOCALECOPYCURRENT */
+
+/* Define to 1 if you have the Mac OS X function CFPreferencesCopyAppValue in
+   the CoreFoundation framework. */
+/* #undef HAVE_CFPREFERENCESCOPYAPPVALUE */
+
+/* Define if the GNU dcgettext() function is already present or preinstalled.
+   */
+#define HAVE_DCGETTEXT 1
+
+/* Define to 1 if you have the declaration of 'cygwin_conv_path', and to 0 if
+   you don't. */
+/* #undef HAVE_DECL_CYGWIN_CONV_PATH */
+
+/* Define to 1 if you have the declaration of 'PAM_DATA_SILENT', and to 0 if
+   you don't. */
+#define HAVE_DECL_PAM_DATA_SILENT 1
+
+/* Define to 1 if you have the declaration of 'PAM_DELETE_CRED', and to 0 if
+   you don't. */
+#define HAVE_DECL_PAM_DELETE_CRED 1
+
+/* Define to 1 if you have the declaration of 'PAM_ESTABLISH_CRED', and to 0
+   if you don't. */
+#define HAVE_DECL_PAM_ESTABLISH_CRED 1
+
+/* Define to 1 if you have the declaration of 'PAM_NEW_AUTHTOK_REQD', and to 0
+   if you don't. */
+#define HAVE_DECL_PAM_NEW_AUTHTOK_REQD 1
+
+/* Define if you have the GNU dld library. */
+/* #undef HAVE_DLD */
+
+/* Define to 1 if you have the 'dlerror' function. */
+#define HAVE_DLERROR 1
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#define HAVE_DLFCN_H 1
+
+/* Define if you have the _dyld_func_lookup function. */
+/* #undef HAVE_DYLD */
+
+/* Define to 1 if you have the 'explicit_bzero' function. */
+#define HAVE_EXPLICIT_BZERO 1
+
+/* Defined to 1 if you have the declaration of 'fgetpwent_r' */
+#define HAVE_FGETPWENT_R 1
+
+/* Define to 1 if you have the 'getentropy' function. */
+#define HAVE_GETENTROPY 1
+
+/* Define to 1 if you have the 'getrandom' function. */
+#define HAVE_GETRANDOM 1
+
+/* Define to 1 if you have the 'getspnam_r' function. */
+#define HAVE_GETSPNAM_R 1
+
+/* Define if the GNU gettext() function is already present or preinstalled. */
+#define HAVE_GETTEXT 1
+
+/* Define if you have the iconv() function and it works. */
+/* #undef HAVE_ICONV */
+
+/* Define to 1 if you have the 'innetgr' function. */
+#define HAVE_INNETGR 1
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#define HAVE_INTTYPES_H 1
+
+/* Define to 1 if you have the 'lckpwdf' function. */
+#define HAVE_LCKPWDF 1
+
+/* Define if you have the libdl library or equivalent. */
+#define HAVE_LIBDL 1
+
+/* Define if libdlloader will be built on this platform */
+#define HAVE_LIBDLLOADER 1
+
+/* Define to 1 if you have the <linux/btrfs_tree.h> header file. */
+#define HAVE_LINUX_BTRFS_TREE_H 1
+
+/* Define to 1 if you have the <linux/magic.h> header file. */
+#define HAVE_LINUX_MAGIC_H 1
+
+/* Define if struct lastlog has ll_host */
+/* #undef HAVE_LL_HOST */
+
+/* Define to 1 if you have the 'lutimes' function. */
+#define HAVE_LUTIMES 1
+
+/* Define to 1 if you have the 'memset_explicit' function. */
+#define HAVE_MEMSET_EXPLICIT 1
+
+/* Define to 1 if you have the <minix/config.h> header file. */
+/* #undef HAVE_MINIX_CONFIG_H */
+
+/* Define to 1 if you have the 'putgrent' function. */
+#define HAVE_PUTGRENT 1
+
+/* Define to 1 if you have the 'putpwent' function. */
+#define HAVE_PUTPWENT 1
+
+/* Define to 1 if you have the 'putspent' function. */
+#define HAVE_PUTSPENT 1
+
+/* Define to 1 if you have the <readpassphrase.h> header file. */
+/* #undef HAVE_READPASSPHRASE_H */
+
+/* Define to 1 if you have the 'rpmatch' function. */
+#define HAVE_RPMATCH 1
+
+/* Define to 1 if you have the <security/openpam.h> header file. */
+/* #undef HAVE_SECURITY_OPENPAM_H */
+
+/* Define to 1 if you have the <security/pam_misc.h> header file. */
+#define HAVE_SECURITY_PAM_MISC_H 1
+
+/* Define to 1 if you have the <selinux/selinux.h> header file. */
+/* #undef HAVE_SELINUX_SELINUX_H */
+
+/* Define to 1 if you have the <semanage/semanage.h> header file. */
+/* #undef HAVE_SEMANAGE_SEMANAGE_H */
+
+/* Define to 1 if you have the 'sgetgrent' function. */
+/* #undef HAVE_SGETGRENT */
+
+/* Define to 1 if you have the 'sgetpwent' function. */
+/* #undef HAVE_SGETPWENT */
+
+/* Define to 1 if you have the 'sgetspent' function. */
+#define HAVE_SGETSPENT 1
+
+/* Define if you have the shl_load function. */
+/* #undef HAVE_SHL_LOAD */
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#define HAVE_STDINT_H 1
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#define HAVE_STDIO_H 1
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#define HAVE_STDLIB_H 1
+
+/* Define to 1 if you have the 'stpecpy' function. */
+/* #undef HAVE_STPECPY */
+
+/* Define to 1 if you have the 'stpeprintf' function. */
+/* #undef HAVE_STPEPRINTF */
+
+/* Define to 1 if you have the <strings.h> header file. */
+#define HAVE_STRINGS_H 1
+
+/* Define to 1 if you have the <string.h> header file. */
+#define HAVE_STRING_H 1
+
+/* Define to 1 if 'ut_addr' is a member of 'struct utmpx'. */
+/* #undef HAVE_STRUCT_UTMPX_UT_ADDR */
+
+/* Define to 1 if 'ut_addr_v6' is a member of 'struct utmpx'. */
+#define HAVE_STRUCT_UTMPX_UT_ADDR_V6 1
+
+/* Define to 1 if 'ut_host' is a member of 'struct utmpx'. */
+#define HAVE_STRUCT_UTMPX_UT_HOST 1
+
+/* Define to 1 if 'ut_name' is a member of 'struct utmpx'. */
+/* #undef HAVE_STRUCT_UTMPX_UT_NAME */
+
+/* Define to 1 if 'ut_syslen' is a member of 'struct utmpx'. */
+/* #undef HAVE_STRUCT_UTMPX_UT_SYSLEN */
+
+/* Define to 1 if 'ut_time' is a member of 'struct utmpx'. */
+/* #undef HAVE_STRUCT_UTMPX_UT_TIME */
+
+/* Define to 1 if 'ut_xtime' is a member of 'struct utmpx'. */
+/* #undef HAVE_STRUCT_UTMPX_UT_XTIME */
+
+/* Define to 1 if you have the <sys/statfs.h> header file. */
+#define HAVE_SYS_STATFS_H 1
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#define HAVE_SYS_STAT_H 1
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#define HAVE_SYS_TYPES_H 1
+
+/* Define to 1 if you have the <tcb.h> header file. */
+/* #undef HAVE_TCB_H */
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#define HAVE_UNISTD_H 1
+
+/* Define to 1 if you have the 'updwtmpx' function. */
+#define HAVE_UPDWTMPX 1
+
+/* Define to 1 if you have the <utime.h> header file. */
+#define HAVE_UTIME_H 1
+
+/* Define to 1 if 'utime(file, NULL)' sets file's timestamp to the present. */
+#define HAVE_UTIME_NULL 1
+
+/* Define to support vendor settings. */
+/* #undef HAVE_VENDORDIR */
+
+/* Define to 1 if you have the <wchar.h> header file. */
+#define HAVE_WCHAR_H 1
+
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
+#define LT_OBJDIR ".libs/"
+
+/* Location of system mail spool directory. */
+#define MAIL_SPOOL_DIR "/var/mail"
+
+/* Name of user's mail spool file if stored in user's home directory. */
+/* #undef MAIL_SPOOL_FILE */
+
+/* Name of package */
+#define PACKAGE "shadow"
+
+/* Define to the address where bug reports for this package should be sent. */
+#define PACKAGE_BUGREPORT "pkg-shadow-devel@lists.alioth.debian.org"
+
+/* Define to the full name of this package. */
+#define PACKAGE_NAME "shadow"
+
+/* Define to the full name and version of this package. */
+#define PACKAGE_STRING "shadow 4.19.3"
+
+/* Define to the one symbol short name of this package. */
+#define PACKAGE_TARNAME "shadow"
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL "https://github.com/shadow-maint/shadow"
+
+/* Define to the version of this package. */
+#define PACKAGE_VERSION "4.19.3"
+
+/* Path to passwd program. */
+#define PASSWD_PROGRAM "/bin/passwd"
+
+/* Define to support the shadow group file. */
+#define SHADOWGRP 1
+
+/* PAM conversation to use */
+#define SHADOW_PAM_CONVERSATION misc_conv
+
+/* The default shell. */
+#define SHELL "/bin/sh"
+
+/* The size of 'gid_t', as computed by sizeof. */
+#define SIZEOF_GID_T 4
+
+/* The size of 'uid_t', as computed by sizeof. */
+#define SIZEOF_UID_T 4
+
+/* Define to support S/Key logins. */
+/* #undef SKEY */
+
+/* Define to support newer BSD S/Key API */
+/* #undef SKEY_BSD_STYLE */
+
+/* Define to 1 if all of the C89 standard headers exist (not just the ones
+   required in a freestanding environment). This macro is provided for
+   backward compatibility; new code need not use it. */
+#define STDC_HEADERS 1
+
+/* Define to support /etc/suauth su access control. */
+/* #undef SU_ACCESS */
+
+/* Define to allow the bcrypt password encryption algorithm */
+#define USE_BCRYPT 1
+
+/* Define to support flushing of nscd caches */
+#define USE_NSCD 1
+
+/* Define to support Pluggable Authentication Modules */
+#define USE_PAM 1
+
+/* Define to allow the SHA256 and SHA512 password encryption algorithms */
+#define USE_SHA_CRYPT 1
+
+/* Define to support flushing of sssd caches */
+#define USE_SSSD 1
+
+/* Enable extensions on AIX, Interix, z/OS.  */
+#ifndef _ALL_SOURCE
+# define _ALL_SOURCE 1
+#endif
+/* Enable general extensions on macOS.  */
+#ifndef _DARWIN_C_SOURCE
+# define _DARWIN_C_SOURCE 1
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# define __EXTENSIONS__ 1
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE 1
+#endif
+/* Enable X/Open compliant socket functions that do not require linking
+   with -lxnet on HP-UX 11.11.  */
+#ifndef _HPUX_ALT_XOPEN_SOCKET_API
+# define _HPUX_ALT_XOPEN_SOCKET_API 1
+#endif
+/* Identify the host operating system as Minix.
+   This macro does not affect the system headers' behavior.
+   A future release of Autoconf may stop defining this macro.  */
+#ifndef _MINIX
+/* # undef _MINIX */
+#endif
+/* Enable general extensions on NetBSD.
+   Enable NetBSD compatibility extensions on Minix.  */
+#ifndef _NETBSD_SOURCE
+# define _NETBSD_SOURCE 1
+#endif
+/* Enable OpenBSD compatibility extensions on NetBSD.
+   Oddly enough, this does nothing on OpenBSD.  */
+#ifndef _OPENBSD_SOURCE
+# define _OPENBSD_SOURCE 1
+#endif
+/* Define to 1 if needed for POSIX-compatible behavior.  */
+#ifndef _POSIX_SOURCE
+/* # undef _POSIX_SOURCE */
+#endif
+/* Define to 2 if needed for POSIX-compatible behavior.  */
+#ifndef _POSIX_1_SOURCE
+/* # undef _POSIX_1_SOURCE */
+#endif
+/* Enable POSIX-compatible threading on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# define _POSIX_PTHREAD_SEMANTICS 1
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-5:2014.  */
+#ifndef __STDC_WANT_IEC_60559_ATTRIBS_EXT__
+# define __STDC_WANT_IEC_60559_ATTRIBS_EXT__ 1
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-1:2014.  */
+#ifndef __STDC_WANT_IEC_60559_BFP_EXT__
+# define __STDC_WANT_IEC_60559_BFP_EXT__ 1
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-2:2015.  */
+#ifndef __STDC_WANT_IEC_60559_DFP_EXT__
+# define __STDC_WANT_IEC_60559_DFP_EXT__ 1
+#endif
+/* Enable extensions specified by C23 Annex F.  */
+#ifndef __STDC_WANT_IEC_60559_EXT__
+# define __STDC_WANT_IEC_60559_EXT__ 1
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-4:2015.  */
+#ifndef __STDC_WANT_IEC_60559_FUNCS_EXT__
+# define __STDC_WANT_IEC_60559_FUNCS_EXT__ 1
+#endif
+/* Enable extensions specified by C23 Annex H and ISO/IEC TS 18661-3:2015.  */
+#ifndef __STDC_WANT_IEC_60559_TYPES_EXT__
+# define __STDC_WANT_IEC_60559_TYPES_EXT__ 1
+#endif
+/* Enable extensions specified by ISO/IEC TR 24731-2:2010.  */
+#ifndef __STDC_WANT_LIB_EXT2__
+# define __STDC_WANT_LIB_EXT2__ 1
+#endif
+/* Enable extensions specified by ISO/IEC 24747:2009.  */
+#ifndef __STDC_WANT_MATH_SPEC_FUNCS__
+# define __STDC_WANT_MATH_SPEC_FUNCS__ 1
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# define _TANDEM_SOURCE 1
+#endif
+/* Enable X/Open extensions.  Define to 500 only if necessary
+   to make mbstate_t available.  */
+#ifndef _XOPEN_SOURCE
+/* # undef _XOPEN_SOURCE */
+#endif
+
+
+/* Define to allow the yescrypt password encryption algorithm */
+#define USE_YESCRYPT 1
+
+/* Directory for distribution provided configuration files */
+/* #undef VENDORDIR */
+
+/* Version number of package */
+#define VERSION "4.19.3"
+
+/* Build shadow with ACL support */
+#define WITH_ACL 1
+
+/* Build shadow with Extended Attributes support */
+#define WITH_ATTR 1
+
+/* Define if you want to enable Audit messages */
+/* #undef WITH_AUDIT */
+
+/* Build shadow with BtrFS support */
+#define WITH_BTRFS 1
+
+/* Build shadow without libbsd support */
+#define WITH_LIBBSD 0
+
+/* Build shadow with SELinux support */
+/* #undef WITH_SELINUX */
+
+/* Build with su */
+#define WITH_SU 1
+
+/* Build shadow with tcb support (incomplete) */
+/* #undef WITH_TCB */
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+/* #undef _FILE_OFFSET_BITS */
+
+/* Define to 1 on platforms where this makes off_t a 64-bit type. */
+/* #undef _LARGE_FILES */
+
+/* Number of bits in time_t, on hosts where this is settable. */
+/* #undef _TIME_BITS */
+
+/* Define to 1 on platforms where this makes time_t a 64-bit type. */
+/* #undef __MINGW_USE_VC2005_COMPAT */

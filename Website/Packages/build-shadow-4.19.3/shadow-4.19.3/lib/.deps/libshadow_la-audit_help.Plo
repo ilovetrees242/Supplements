@@ -1,0 +1,4 @@
+libshadow_la-audit_help.lo: audit_help.c /usr/include/stdc-predef.h \
+ ../config.h
+/usr/include/stdc-predef.h:
+../config.h:

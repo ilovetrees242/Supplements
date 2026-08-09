@@ -1,0 +1,4 @@
+libshadow_la-pwdcheck.lo: pwdcheck.c /usr/include/stdc-predef.h \
+ ../config.h
+/usr/include/stdc-predef.h:
+../config.h:
