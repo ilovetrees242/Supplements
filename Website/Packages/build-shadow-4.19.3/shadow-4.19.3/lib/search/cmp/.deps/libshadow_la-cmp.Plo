@@ -1,5 +1,0 @@
-search/cmp/libshadow_la-cmp.lo: search/cmp/cmp.c \
- /usr/include/stdc-predef.h ../config.h search/cmp/cmp.h
-/usr/include/stdc-predef.h:
-../config.h:
-search/cmp/cmp.h:
