@@ -1,0 +1,34 @@
+.cont .headers {
+    margin: 0;
+    padding-bottom: 0
+}
+.cont {
+    padding-left: 25px;
+    padding-bottom: 60px;
+    width: calc(80% - 25px);
+}
+.cont div {
+    transition: 1s ease-in-out;
+    background-color: var(--black);
+    font-size: 20px;
+    padding: 25px;
+    display: flex;
+    color: var(--cool-white);
+    border-left: 5px solid var(--cool-white);
+}
+.cont p {
+    width: 65%;
+    font-size: 21px;
+}
+.cont div:nth-child(1) {
+    background-color: var(--white);
+}
+.cont div:nth-child(1) h2 {
+    color: var(--black);
+}
+#cont2 div {
+    background-color: var(--black);
+}
+#cont2 h2 {
+    color: var(--cool-white);
+}

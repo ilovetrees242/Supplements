@@ -50,6 +50,7 @@
                 <a href="#pkgs">Pkgs</a>
                 <a href="#list">List</a>
             </div>
+			<a class="subtopic ssubtopic" href="#useflags">Useflags</a>
             <h3 class="topics">Installing a package</h3>
 			<a class="subtopic" href="#instpkg">How to install a package</a>
 			<a class="ssubtopic subtopic" href="#opts">Options</a>
@@ -83,6 +84,7 @@
             <a class="subtopic" href="#pathvars_cache">Cache Path</a>
             <a class="subtopic" href="#pathvars_prefix">Prefix</a>
             <a class="subtopic" href="#pathvars_dest">Dest</a>
+            <h3 class="topics" href="creating_pkg">Creating your own package</h3>
         </div>
     </div>
     <nav class="nav">
@@ -111,6 +113,7 @@
                 <a href="#pkgs">Pkgs</a>
                 <a href="#list">List</a>
             </div>
+			<a class="subtopic" href="#useflags">Useflags</a>
             <h3 class="topics">Installing a package</h3>
 			<a class="subtopic" href="#instpkg">How to install a package</a>
 			<a class="ssubtopic subtopic" href="#opts">Options</a>
@@ -144,6 +147,10 @@
             <a class="subtopic" href="#pathvars_cache">Cache Path</a>
             <a class="subtopic" href="#pathvars_prefix">Prefix</a>
             <a class="subtopic" href="#pathvars_dest">Dest</a>
+            <h3 class="topics" href="creating_pkg">Creating your own package</h3>
+        </div>
+        <div>
+            <h1>CoolWeb</h1>
         </div>
     </nav>
     <main>
@@ -219,7 +226,8 @@
         <h1 class="bigheaders">
             Getting started
         </h1><br>
-        <p class="para" id="basicops">Here are the operations you can do with the package manager: </p><br>
+        <h3 class="mheaders" id="basicops">Basic operations</h3>
+        <p class="para">Here are the operations you can do with the package manager: </p><br>
         <ul>
             <li style="margin-bottom: 7px;"><b id="unveil" class="code">unveil</b> : This action is used to <i class="special-word">install</i> a new package into the system, or <i>DEST</i> specified by the user</li>
             <li style="margin-bottom: 7px;"><b id="veil" class="code">veil</b> : This action is used to <i class="special-word">uninstall</i> a package from the system <i style="color: var(--danger)">permanently</i></li>
@@ -232,7 +240,14 @@
             <li style="margin-bottom: 7px;"><b id="pkgs" class="code">pkgs</b> : This action is used to list the <i class="special-word">number of packages installed</i>. Useful for other programs like fetch programs on the system</li>
             <li style="margin-bottom: 7px;"><b id="list" class="code">list</b> : This action is used to list the names of all of the <i class="special-word">packages installed</i>. Useful for other programs like fetch programs on the system</li>
         </ul>
+        <h3 class="mheaders" id="useflags">Using useflags while installing packages</h3>
+        <p>USEFLAGS in this package manager are implemented the same way as they were in gentoo. There are global useflags which set useflags visible to all packages, and local useflags that only set useflags for a specific package.</p>
+        <p>How to set global useflags:</p>
         <br>
+        <p><b class="code">/etc/Veiler/veiler.conf:</b> You can use this file and set the USEFLAGS variable to the desired useflags you want for the packages to be installed. These useflags must be space seperated in order to work properly. Example: <i class="special-word">USEFLAGS="+MULTILIB -NLS -RPATH"</i></p>
+        <p>How to set local useflags:</p>
+        <br>
+        <p><b class="code">/etc/Veiler/package.use:</b> You can use this file and enter the name of the package in a new line, followed by "-&gt;" and then the useflags seperated by space. Example: <i class="special-word">which -> -RPATH +GNULD -NLS</i></p>
         <h1 class="bigheaders">Installing a package</h1>
         <br>
         <p class="para" id="instpkg">To install a package, you must run <b class="code">sudo Veiler unveil [PKGNAME] [OPTIONS]</b></p>
@@ -372,6 +387,16 @@
         <h3 class="mheaders" style="padding: 5px 0px 5px 0px">How to use</h3>
         <p class="para">Usage is very simple, just use <i class="special-word">$VEILERDEST</i> or <i class="special-word">--with-dest</i>. --with-dest requires an argument to the absolute path of the destination directory.</p>
     </ul>
+    <h2 class="bigheaders" id="creating_pkg">Creating your own packages</h2>
+    <h3 class="mheaders" id="creating_pkg">Introduction</h3>
+    <p class="para">Alright, last but not least creating your own packages. This section will explain things like adding the package to the database entry, creating a buildscript for it and adding it to the package repo</p>
+    <p class="para">Things required for a package</p>
+    <ul>
+        <li>A valid database entry with a proper <i class="special-word">info</i> file ( MOONPKGNAME and MOONPKGVERSION must match the respective name and version of the package in the repo )
+        <li>A proper MOONBUILD build script
+        <li>Optionally an sha256 file containing the checksums of the buildscript, source tarball and other downloads ( recommanded )
+    </uL>
+    <h3 class="mheaders">Creating a buildscript for a package</h3>
     </main>
     <footer>
         <p>&copy; 2026 CoolWeb</a></p>

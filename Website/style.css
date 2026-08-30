@@ -9,108 +9,45 @@ body {
     font-family: "SN Pro";
 }
 main {
-    margin-left: 21%;
+    margin-left: 20vw;
 }
 .intro {
     z-index: -1;
-    width: calc(100% - 100px);
-    top: 10px;
-    padding: 50px;
+    width: auto;
+    margin: 15px;
+    margin-left: -3vw;
+    padding: 35px;
     font-size: 75px;
     position: relative;
-    top: 0;
     color: var(--white);
     background-color: var(--cool-dark-white);
-}
-.cont .headers {
-    margin: 0;
-    padding-bottom: 0
+    border-radius: 15px;
 }
 .headers {
     font-size: 50px;
     padding-left: 25px;
     position: relative;
 }
-.cont {
-    padding-left: 25px;
-    padding-bottom: 60px;
-    width: calc(80% - 25px);
-}
-.cont div {
-    transition: 1s ease-in-out;
-    background-color: #101010;
-    font-size: 20px;
-    padding: 25px;
-    display: flex;
-    color: var(--cool-white);
-    border-left: 5px solid var(--cool-white);
-}
-.cont div:nth-of-type(1) {
-    background-color: var(--cool-white);
-    text-align: center;
-}
-.cont div:nth-of-type(1) h2 {
-    color: var(--black);
-}
-.cont div:last-child {
-    padding: 0;
-    height: 50px;
-    padding-left: 25px;
-    display: block;
-}
-.cont div:last-child div {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    width: 0;
-    border-width: 0px;
-    float: right;
-    background-color: transparent;
-    border-left: 50px solid transparent;
-    border-bottom: 50px solid #050506;
-    transform: translateY(-50px);
-}
 #heap {
     padding-left: 25px;
-}
-.cont p {
-    width: 65%;
-    font-size: 21px;
 }
 .parap {
     width: 60%;
     padding-left: 25px;
 }
-#proglangc, #proglangasm, #proglangbash {
-    padding: 0px
+#cont2 img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: calc((100% / 2) - (90px / 2));
+    display: block;
 }
 #proglangc img {
     width: 90px;
-    height: 100px;
 }
-#proglangasm div, #proglangc div, #proglangbash div {
-    width: 100px;
-    height: 100px;
-    border: none;
-}
-#proglangc div {
-    padding: 25px
-}
-#proglangbash div, #proglangasm div {
-    padding: 20px;
-    width: 110px;
-    height: 100px;
-    border: none;
-}
-#proglangc div {
-    background: conic-gradient(#649bd3 40deg, #ffffff 150deg, #004283 250deg, #00579d 270deg, #649bd3 350deg);
-}
-#proglangasm div {
-    background: conic-gradient(#0d47a1 40deg, #ffffff 150deg, #3949ab 250deg, #5969bf 270deg, #0d47a1 350deg);
-}
-#proglangbash div {
-    background: conic-gradient(#ededed 40deg, #434345 150deg, #413e45 250deg, #4cac23 270deg, #ededed 350deg);
+#cont2 {
+    background-color: transparent;
+    margin-left: -4vw;
 }
 #cont2 h2 {
     padding-left: 5px;
@@ -118,16 +55,40 @@ main {
 #cont2 p {
     font-size: 15px;
     padding-left: 5px;
-    width: 95%;
-    display: block;
-    color: var(--cool-dark-white)
+    color: var(--cool-dark-white);
+    width: 60%;
+}
+#cont2 div div:nth-child(2) {
+    background-color: var(--black);
+    width: 85%;
+}
+#cont2 div div:nth-child(1){
+    height: 100%;
+    width: 20%;
+    border: none;
+}
+#proglangc, #proglangasm, #proglangbash, #markuplanghtml {
+    height: 300px;
+    display: flex;
+}
+#proglangc div:nth-child(1) {
+    background: conic-gradient(#649bd3 40deg, #ffffff 150deg, #004283 250deg, #00579d 270deg, #649bd3 350deg);
+}
+#proglangasm div:nth-child(1) {
+    background: conic-gradient(#0d47a1 40deg, #ffffff 150deg, #3949ab 250deg, #5969bf 270deg, #0d47a1 350deg);
+}
+#proglangbash div:nth-child(1){
+    background: conic-gradient(#ededed 40deg, #434345 150deg, #413e45 250deg, #4cac23 270deg, #ededed 350deg);
+}
+#markuplanghtml div:nth-child(1) {
+    background: conic-gradient(#e44d29 40deg, #ffffff 150deg, #f16529 250deg, #e44d29)
 }
 footer {
     margin-top: 250px;
     background-color: var(--black);
     padding: 25px;
-    width: calc(100% - 21vw);
-    margin-left: 21vw;
+    width: calc(100% - 16vw);
+    margin-left: 16vw;
 }
 footer a {
     text-decoration: none;
@@ -136,16 +97,13 @@ footer a {
 footer p{
     color: white;
 }
-#cont2 article {
-    width: calc(50px + 60%);
-}
 @media all and (max-width: 545px) {
-    #proglangc div, #proglangasm div, #proglangbash div {
-        display: none;
-    }
     .intro {
         margin-top: 70px;
         font-size: 45px;
+    }
+    footer {
+        margin-left: 0v
     }
 }
 @media all and (max-width: 830px) {
@@ -154,5 +112,12 @@ footer p{
     }
     .intro {
         margin-top: 70px;
+    }
+    footer {
+        margin-left: 0px;
+        width: 100%;
+    }
+    #cont2 img {
+        display: none;
     }
 }
