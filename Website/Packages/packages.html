@@ -5,6 +5,7 @@
 	<link rel=stylesheet href="packages.css">
 	<link rel=stylesheet href="../navbar.css">
 	<link rel=stylesheet href="../colors.css">
+	<link rel=stylesheet href="../common.css">
     <meta charset="utf-8">
     <meta name="viewport" content="device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +16,12 @@
 <body>
     <div class="mob-nav">
         <div>
-            <h1 style="margin: 0px">CoolWeb</h1>
-            <div class="btn">≡</div>
+            <span style="margin: 0px">CoolWeb</span>
+            <div id="btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </div>
     <div class="mob-nav-panel">
@@ -33,16 +38,8 @@
         </div>
     </div>
     <main>
-        <h1 class="reponame">the official repository for packages</h1>
-        <div class="alphabets">
-            <a>Numbers</a>
-            <a>A</a><a>B</a><a>C</a><a>D</a><a>E</a>    
-            <a>F</a><a>G</a><a>H</a><a>I</a><a>J</a>    
-            <a>K</a><a>L</a><a>M</a><a>N</a><a>O</a>    
-            <a>P</a><a>Q</a><a>R</a><a>S</a><a>T</a>    
-            <a>U</a><a>V</a><a>W</a><a>X</a><a>Y</a>    
-            <a>Z</a>
-        </div>
+        <h1 class="intro">the official repository for packages</h1>
+
         
 	    <div class="pkgbox" style="height: auto; padding-bottom: 5px;">
 	        <a class="pkg" href="acl.tar.gz">acl</a>
@@ -75,5 +72,6 @@
             <p class="insprogs">Installed Programs: neofetch</p>
 	    </div>
     </main>
+    <script src="../navbar.js"></script>
 </body>
 </html>

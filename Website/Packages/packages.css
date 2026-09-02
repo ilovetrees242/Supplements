@@ -7,44 +7,8 @@ body{
     color: #ECE6E9;
     font-family: "SN Pro";
 }
-.reponame {
-    padding: 50px;
-    font-size: 75px;
-    margin-top: 0px;
-    width: 100%;
-    z-index: -1;
-    background-color: var(--cool-dark-white);
-    color: var(--white);
-    position: relative;
-}
 main {
-    margin-left: 21%;
-}
-.alphabets {
-    width: 75%;
-    margin: 5px;
-    border-radius: 25px;
-    background: linear-gradient(to bottom, var(--cool-dark-white), #1F1F1F 50%);
-    padding: 4px;
-    border: none;
-}
-.alphabets a {
-    display: block;
-    padding: 25px;
-    background-color: #151414;
-    color: #ECE6E9;
-}
-.alphabets a:first-child {
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-}
-.alphabets a:last-child {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-.alphabets a:hover {
-    background-color: #1c1c1c;
-    cursor: pointer;
+    margin-left: 21vw;
 }
 .pkgbox {
 	background-color: var(--black);
@@ -52,6 +16,7 @@ main {
 	margin: 5px;
 	height: auto;
 	border-radius: 15px;
+    margin-left: calc(-6vw + 25px);
 }
 .pkgbox > .pkg {
 	color: var(--black);

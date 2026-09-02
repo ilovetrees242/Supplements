@@ -1,3 +1,15 @@
+.intro {
+    z-index: -1;
+    width: auto;
+    margin: 15px;
+    margin-left: calc(-6vw + 15px * 2);
+    padding: 35px;
+    font-size: 75px;
+    position: relative;
+    color: var(--white);
+    background-color: var(--cool-dark-white);
+    border-radius: 15px;
+}
 .cont .headers {
     margin: 0;
     padding-bottom: 0
@@ -21,7 +33,7 @@
     font-size: 21px;
 }
 .cont div:nth-child(1) {
-    background-color: var(--white);
+    background-color: var(--cool-white);
 }
 .cont div:nth-child(1) h2 {
     color: var(--black);
@@ -31,4 +43,46 @@
 }
 #cont2 h2 {
     color: var(--cool-white);
+}
+footer {
+    margin-top: 250px;
+    background-color: var(--body-black);
+    padding: 25px;
+    width: calc(100% - 16vw);
+    margin-left: 16vw;
+    border-top: 2px solid var(--black);
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer p{
+    color: white;
+}
+@media all and (max-width: 830px) {
+    main {
+        margin-left: 0px;
+    }
+    footer {
+        margin-left: 0px;
+    } 
+    .intro {
+        margin-top: 80px;
+        margin-left: 15px;
+    }
+} 
+@media all and (max-width: 565px) {
+    .intro {
+        margin-top: 80px;
+        font-size: 45px;
+    }
+}
+.headers {
+    font-size: 35px;
+    padding-left: 25px;
+    position: relative;
+}
+.parap {
+    width: 60%;
+    padding-left: 25px;
 }

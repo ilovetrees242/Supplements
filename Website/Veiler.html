@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Veiler.css">
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="Images/CW.png">
@@ -20,8 +21,12 @@
 <body>
     <div class="mob-nav">
 	<div>
-	    <h1>CoolWeb</h1>
-	    <div class="btn">≡</div>
+	    <span>CoolWeb</span>
+	    <div id="btn">
+	    	<div></div>
+	    	<div></div>
+	    	<div></div>
+	    </div>
 	</div>
     </div>
     <div class="mob-nav-panel">
@@ -30,8 +35,9 @@
         <a href="index.html">Home</a>	
         <div class="contents">
             <h3 class="topics">Introduction</h3>
-			<a class="subtopic" href="#abtpm">About the PM</a>
-		    <a class="subtopic" href="#contri">Contributing</a>
+	    	<a class="subtopic" href="#abtpm">About the PM</a>
+			<a class="subtopic" href="#contri">Contributing</a>
+		    <a class="subtopic" href="#using">Using the package manager on systems</a>
 			<a class="subtopic" href="#feat">Features</a>
 		    <a class="subtopic" href="#disabil">What it cannot do</a>
             <h3 class="topics">Installation</h3>
@@ -50,7 +56,7 @@
                 <a href="#pkgs">Pkgs</a>
                 <a href="#list">List</a>
             </div>
-			<a class="subtopic ssubtopic" href="#useflags">Useflags</a>
+            <a class="subtopic ssubtopic" href="#useflags">Useflags</a>
             <h3 class="topics">Installing a package</h3>
 			<a class="subtopic" href="#instpkg">How to install a package</a>
 			<a class="ssubtopic subtopic" href="#opts">Options</a>
@@ -95,6 +101,7 @@
             <h3 class="topics">Introduction</h3>
 			<a class="subtopic" href="#abtpm">About the PM</a>
 		    <a class="subtopic" href="#contri">Contributing</a>
+		    <a class="subtopic" href="#using">Using the package manager on systems</a>
 			<a class="subtopic" href="#feat">Features</a>
 		    <a class="subtopic" href="#disabil">What it cannot do</a>
             <h3 class="topics">Installation</h3>
@@ -166,7 +173,17 @@
         </h2>	
         <p class="para">This is a package manager made for Linux From Scratch for solving the issue of upgrading of packages and dependency hell, not to be intended to be used with real distros. I know most of the code is unoptimized but hey it works. This package manager is purely written in bash script and is made by one person and no AI. Inspired by pacman and portage</p>
         <h2 class="headers" id="contri">Contributing</h2>	
-	<p class="para">If you care to contribute, it would help alot if you contribute in fixing small bugs and expanding the package repository. Theres like 200+ packages built in LFS which would be a pain for me</h2>
+        <p class="para">If you care to contribute, it would help alot if you contribute in fixing small bugs and expanding the package repository. Theres like 200+ packages built in LFS which would be a pain for me</h2>
+        <h2 class="headers" id="using">Using the package manager in your system.</h2>
+        <p class="para">You can use this package manager on your system, but you have to take precaution because this package manager has not been tested enough to find bugs. Incase you find any bugs raise an issue on GitHub or contact me through discord (rblox0213) or mail me.</p>
+        <div style="margin-left: 20px">
+            <h3 class="mheaders">While building base LFS</h3>
+            <p>Now using this while building LFS is a little tricky. Because most of the stuff required by Veiler is not present on the system. The thing is, you cannot use Veiler to build package before chapter 8, because those packages are cross compiled so that they can be compiled cleanly and be isolated from the host system. So, you can use the package manager in chapter 8, where it is actually most effective ( because theres so many damn packages ). So even after you manage to reach chapter 8 and get the package manager installed on the system, there are few things you need to do before using it. They are:
+            <ul>
+                <li>Compile wget and install it or use a static binary of wget: As wget is not present in LFS, you need to compile it by following the instructions in BLFS and then install it on the LFS system.
+                <li>Set <i class="special-word">$VEILERPREFIX</i> to 1 or use <i class="special-word">--no-root</i> option
+            </ul>
+        </div>
 		<br><br>
         <div class="cont" id="feat">
             <div><h1 class="headers">Features</h1></div>
@@ -184,8 +201,6 @@
             <div>Confirmation prompts</div>
             <div>Information related to disk spaces</div>
             <div>Can detect circular dependencies</div>
-            <div class="corner">
-            </div>
         </div>
         <br>
         <div class="cont" id="disabil">
@@ -195,10 +210,6 @@
             <div>Resolve conflicts</div>
             <div>Use multiple repos</div>
             <div>Use helpers</div>
-            <div>
-                <div class="corner">
-                </div>
-            </div>
         </div>
         <br>
         <h1 class="bigheaders" id="instpm">
@@ -402,5 +413,6 @@
         <p>&copy; 2026 CoolWeb</a></p>
         <p>Contact me: <a href="mailto:riyrty594@gmail.com">riyrty594@gmail.com</a></p>
     </footer>
+    <script src="navbar.js"></script>
 </body>
 </html>

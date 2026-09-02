@@ -15,7 +15,7 @@ main > *:not(.intro) {
     margin-left: 5px;
 }
 main {
-    margin-left: 21%;
+    margin-left: 21vw;
 }
 ul {
     padding-left: 10px;
@@ -31,21 +31,20 @@ li {
 .contents {
     background-color: none;
     height: 40%;
-    width: calc( 100% - 25px );
-    margin: 12.5px 0px 0px 12.5px;
+    width: 100%;
     overflow: scroll;
+    margin-top: 10px;
 }
 .contents .topics {
-    background-color: var(--cool-dark-white);
-    color: var(--black);
+    color: var(--cool-dark-white);
     padding: 10px 25px 10px 25px;
+    border-bottom: 2px solid var(--black);
     max-width: 100%;
     height 50px;
 }
 .contents .subtopic {
     padding: 10px 25px 10px 25px;
     background: none;
-    background-color: var(--dark-gray);
     background-position: 0px;
     transition: 2s ease;
     text-align: left;
@@ -58,10 +57,10 @@ li {
     height: 20px;
     padding: 5px 50px 5px 50px;
     text-align: left;
-    background: #191919;
 }
 .contents .subtopic:hover, .contents .subtopic-content a:hover {
-    background: linear-gradient(var(--light-gray), var(--light-gray));
+    background: var(--cool-white);
+    color: var(--black);
     cursor: pointer;
 }
 .contents .subtopic:hover + div, .contents .subtopic-content:has(a:hover) {
@@ -75,14 +74,6 @@ li {
     font-weight: bold;
     display: inline-block;
     margin-left: 10px
-}
-.intro {
-    background: var(--cool-dark-white);
-    color: var(--white);
-    font-size: 65px;
-    padding: 60px;
-    z-index: -1;
-    word-break: break-all;
 }
 .bigheaders h1 {
     font-size: 55px;
@@ -151,58 +142,8 @@ td {
 .heading > th {
     color: var(--white);
 }
-.cont .headers {
-    margin: 0;
-    padding-bottom: 0;
-    color: var(--black);
-}
-.cont {
-    padding-left: 25px;
-    padding-bottom: 60px;
-    width: 80%
-}
 .overflowmask {
     overflow: scroll;
-}
-.cont div {
-    transition: 1s ease-in-out;
-    background-color: #101010;
-    width: calc(100% - 25px);
-    font-size: 20px;
-    padding: 25px;
-    display: flex;
-    color: var(--cool-white);
-    border-left: 5px solid var(--cool-white);
-}
-.cont div:nth-of-type(1) {
-    background-color: var(--cool-white);
-    text-align: center
-}
-.cont div:nth-of-type(1) h2 {
-    color: var(--black);
-}
-.cont div:last-child {
-    padding: 0;
-    height: 50px;
-    padding-left: 25px;
-    width: 100%;
-    display: block;
-}
-.cont div:last-child div {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    width: 0;
-    border-width: 0px;
-    float: right;
-    background-color: transparent;
-    border-left: 50px solid transparent;
-    border-bottom: 50px solid #050506;
-    transform: translateY(-50px);
-}
-.cont-intro {
-    padding-right: 20px;
 }
 table {
     border-collapse: collapse
@@ -238,20 +179,8 @@ footer p{
 .special-word {
     font-weight: 700;
     color: #a6a69c;
+    font-family: jbmn;
 } 
 .mob-nav-panel .contents {
     margin-top: 5px;
-}
-@media all and (max-width: 830px) {
-    .intro {
-        font-size: 50px;
-        margin-top: 70px
-    }
-    main {
-        margin-left: 0px
-    }
-    footer {
-        width: auto;
-        margin-left: 0px;
-    }
 }
