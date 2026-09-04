@@ -1,8 +1,7 @@
 const button = document.getElementById("btn");
 const panel = document.getElementsByClassName("mob-nav-panel")
 const rects = button.children
-const offset =  String(Number(window.getComputedStyle(button).getPropertyValue("gap").slice(0, window.getComputedStyle(button).getPropertyValue("gap").indexOf("px"))) + rects[0].clientHeight
-).concat("px")
+const offset = String(parseInt(window.getComputedStyle(button).getPropertyValue("gap")) + rects[0].clientHeight).concat("px")
 
 visible = false;
 
