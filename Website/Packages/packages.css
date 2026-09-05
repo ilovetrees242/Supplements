@@ -17,6 +17,7 @@ main {
 	height: auto;
 	border-radius: 15px;
     margin-left: calc(-6vw + 25px);
+    padding-bottom: 25px;
 }
 .pkgbox > .pkg {
 	color: var(--black);
@@ -29,27 +30,15 @@ main {
     display: inline-block;
     background-color: var(--cool-dark-white);
 }
-.pkgbox > .pkgdesc {
+.pkgdesc, .pkgver {
     color: #E6E0E3;
     width: 75%;
     padding: 7.5px;
     border-radius: 5px;
-}
-.pkgbox > .pkgver {
-    color: #E6E0E3;
-    width: 75%;
-    padding: 7.5px;
-    border-radius: 5px;
-}
-.pkgbox > .example {
-    margin-left: 25px;
-    font-size: 25px;
-    color: #ECE6E9;
 }
 .pkgbox > * {
-	color: black;
 	font-size: 15px;
-	margin-left: 25px;
+    margin: 5px 0px 5px 25px
 }
 .pkgbox > p > b {
 	color: #ECE6E9;
@@ -61,10 +50,6 @@ main {
 }
 .pkgbox > pre >  code {
     color: #F9F9F9;
-}
-.pkgbox > .insprogs {
-   color: var(--cool-white); 
-   padding-bottom: 50px
 }
 @media all and (max-width: 830px){
     main {
