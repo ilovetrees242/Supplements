@@ -41,9 +41,6 @@
 #cont2 div {
     background-color: var(--black);
 }
-#cont2 h2 {
-    color: var(--cool-white);
-}
 footer {
     margin-top: 250px;
     background-color: var(--body-black);

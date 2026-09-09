@@ -1,7 +1,5 @@
 fetch("db.json").then(response => response.json()).then(function (pkgs){
-    for(const [name,pkg] of Object.entries(pkgs.packages)){
-        createPkgBox(pkg);
-    }
+    Object.entries(pkgs.packages).forEach(pkg => createPkgBox(pkg[1]));
 });
 
 function createPkgBox(pkg){

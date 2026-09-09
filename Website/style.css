@@ -9,10 +9,10 @@ body {
     font-family: "SN Pro";
 }
 main {
-    margin-left: 20vw;
+    margin-left: 21vw;
 }
-#heap {
-    padding-left: 25px;
+main .cont, main .headers, main .parap {
+    margin-left: -5vw;
 }
 #cont2 img {
     width: 100px;
@@ -22,12 +22,9 @@ main {
     margin-top: calc((300px / 2) - (100px / 2));
     display: block;
 }
-#proglangc img {
-    width: 90px;
-}
 #cont2 {
     background-color: transparent;
-    margin-left: -4vw;
+    margin-left: -5vw;
 }
 #cont2 h2 {
     padding-left: 5px;
@@ -47,21 +44,36 @@ main {
     width: 20%;
     border: none;
 }
-#proglangc, #proglangasm, #proglangbash, #markuplanghtml {
+#proglangc, #proglangasm, #proglangbash, #markuplanghtml, #stylelangcss, #proglangjs, #vcsgit , #oslinux{
     height: 300px;
     display: flex;
 }
-#proglangc div:nth-child(1) {
+#proglangc img {
+    width: 90px;
+}
+#proglangc div:first-child {
     background: conic-gradient(#649bd3 40deg, #ffffff 150deg, #004283 250deg, #00579d 270deg, #649bd3 350deg);
 }
-#proglangasm div:nth-child(1) {
+#proglangasm div:first-child {
     background: conic-gradient(#0d47a1 40deg, #ffffff 150deg, #3949ab 250deg, #5969bf 270deg, #0d47a1 350deg);
 }
-#proglangbash div:nth-child(1){
+#proglangbash div:first-child{
     background: conic-gradient(#ededed 40deg, #434345 150deg, #413e45 250deg, #4cac23 270deg, #ededed 350deg);
 }
-#markuplanghtml div:nth-child(1) {
+#markuplanghtml div:first-child {
     background: conic-gradient(#e44d29 40deg, #ffffff 150deg, #f16529 250deg, #e44d29)
+}
+#stylelangcss div:first-child {
+    background: conic-gradient(#663399 30deg, #703cac 100deg, #ffffff 250deg, #663399 350deg)
+}
+#proglangjs div:first-child {
+    background: conic-gradient(#e6d244 30deg, #2e302c 100deg, #e6d244 250deg);
+}
+#vcsgit div:first-child {
+    background: conic-gradient(#fa4638 30deg, #ffffff 100deg, #fa4638 250deg);
+}
+#oslinux div:first-child {
+    background: conic-gradient(#f5bd0d 30deg, #020204 100deg, #fdfdfb 250deg, #f5bd0d);
 }
 @media all and (max-width: 830px) {
     #cont2 img {

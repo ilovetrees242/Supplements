@@ -11,16 +11,17 @@ main {
     margin-left: 21vw;
 }
 .pkgbox {
-	background-color: var(--black);
-	width: 70%;
+	background-color: var(--body-black);
+	width: 100%;
 	margin: 5px;
 	height: auto;
 	border-radius: 15px;
+    border: solid 2px var(--black);
     margin-left: calc(-6vw + 25px);
     padding-bottom: 25px;
 }
-.pkgbox > .pkg {
-	color: var(--black);
+.pkgbox .pkg {
+	border: 2px solid var(--black);
 	text-decoration: none;
 	margin: 25px;
 	font-size: 50px;
@@ -28,7 +29,12 @@ main {
     width: calc(100% - 50px);
     border-radius: 5px;
     display: inline-block;
+    color: var(--cool-dark-white);
+    transition: 2s ease;
+}
+.pkgbox .pkg:hover {
     background-color: var(--cool-dark-white);
+    color: var(--black);
 }
 .pkgdesc, .pkgver {
     color: #E6E0E3;
@@ -38,7 +44,7 @@ main {
 }
 .pkgbox > * {
 	font-size: 15px;
-    margin: 5px 0px 5px 25px
+    margin: 0px 0px 0px 25px
 }
 .pkgbox > p > b {
 	color: #ECE6E9;
@@ -58,5 +64,9 @@ main {
     .reponame {
         font-size: 55px;
         margin-top: 50px;
+    }
+    .pkgbox {
+        margin-left: 5px;
+        width: calc(100% - 5px * 3);
     }
 }
