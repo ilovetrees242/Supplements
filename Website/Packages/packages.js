@@ -25,3 +25,17 @@ function createPkgBox(pkg){
     newPkgBox.appendChild(newDesc);
     main[0].appendChild(newPkgBox);
 }
+
+document.getElementById("searchInput").onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.code || e.key;
+    if (keyCode == 'Enter') {
+        const pkgboxes = document.getElementsByClassName("pkgbox");
+        for(let pkg of pkgboxes){
+            pkg.hidden = false;
+            if(pkg.firstChild.innerText.match(document.getElementById("searchInput").value) == null){
+                pkg.hidden = true;
+            }
+        }
+    }
+}

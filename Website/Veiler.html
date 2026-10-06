@@ -16,6 +16,9 @@
         .mob-nav-panel .contents a {
             color: #e5e5e9;
         }
+        #basicops-ul li {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +58,8 @@
                 <a href="#rmpkg">Rmpkg</a>
                 <a href="#pkgs">Pkgs</a>
                 <a href="#list">List</a>
+                <a href="#dumpvars">Dumpvars</a>
+                <a href="#stat">Stat</a>
             </div>
             <a class="subtopic ssubtopic" href="#useflags">Useflags</a>
             <h3 class="topics">Installing a package</h3>
@@ -75,6 +80,7 @@
                 <a href="#optwithdest">--with-dest</a>
                 <a href="#optconfig">--config</a>
                 <a href="#optbuildonly">--build-only</a>
+                <a href="#optexcludedeps">--exclude-deps</a>
             </div>
             <h3 class="topics">Configuration file</h3>
 			<a class="subtopic" href="#cfgintro">Introduction</a>
@@ -119,6 +125,8 @@
                 <a href="#rmpkg">Rmpkg</a>
                 <a href="#pkgs">Pkgs</a>
                 <a href="#list">List</a>
+                <a href="#dumpvars">Dumpvars</a>
+                <a href="#stat">Stat</a>
             </div>
 			<a class="subtopic" href="#useflags">Useflags</a>
             <h3 class="topics">Installing a package</h3>
@@ -139,6 +147,7 @@
                 <a href="#optwithdest">--with-dest</a>
                 <a href="#optconfig">--config</a>
                 <a href="#optbuildonly">--build-only</a>
+                <a href="#optexcludedeps">--exclude-deps</a>
             </div>
             <h3 class="topics">Configuration file</h3>
 			<a class="subtopic" href="#cfgintro">Introduction</a>
@@ -207,7 +216,7 @@
         </div>
         <br>
         <div class="cont" id="disabil">
-            <div><h1 class="headers">What it cannot do</h1></div>
+            <div><h2 class="headers">What it cannot do</h2></div>
             <div>Run hooks</div>
             <div>Do rollbacks</div>
             <div>Resolve conflicts</div>
@@ -242,17 +251,20 @@
         </h1><br>
         <h3 class="mheaders" id="basicops">Basic operations</h3>
         <p class="para">Here are the operations you can do with the package manager: </p><br>
-        <ul>
-            <li style="margin-bottom: 7px;"><b id="unveil" class="code">unveil</b> : This action is used to <i class="special-word">install</i> a new package into the system, or <i>DEST</i> specified by the user</li>
-            <li style="margin-bottom: 7px;"><b id="veil" class="code">veil</b> : This action is used to <i class="special-word">uninstall</i> a package from the system <i style="color: var(--danger)">permanently</i></li>
-            <li style="margin-bottom: 7px;"><b id="strengthen" class="code">strengthen</b> : This action is used to <i class="special-word">update</i> all the packages <i>installed</i> on the system</li>
-            <li style="margin-bottom: 7px;"><b id="search" class="code">search</b> : This action can be used to <i class="special-word">search</i> packages or package on the <i>sync database</i></li>
-            <li style="margin-bottom: 7px;"><b id="help" class="code">help</b> : This action is used to display <i class="special-word">summarised information</i> about using the package manager</li>
-            <li style="margin-bottom: 7px;"><b id="info" class="code">info</b> : This action is used to display the version, name and description of a package or packages which are/is <i class="special-word">installed</i> on the system</li>
-            <li style="margin-bottom: 7px;"><b id="version" class="code">version</b> : This action is used to display the <i class="special-word">version</i> of the package manager</i></li>
-            <li style="margin-bottom: 7px;"><b id="rmpkg" class="code">rmpkg</b> : This action can be used to <i style="color: var(--danger)">delete</i> all the occurences of the specified package(s) <i class="special-word">in the cache directory</i></li>
-            <li style="margin-bottom: 7px;"><b id="pkgs" class="code">pkgs</b> : This action is used to list the <i class="special-word">number of packages installed</i>. Useful for other programs like fetch programs on the system</li>
-            <li style="margin-bottom: 7px;"><b id="list" class="code">list</b> : This action is used to list the names of all of the <i class="special-word">packages installed</i>. Useful for other programs like fetch programs on the system</li>
+        <ul id="basicops-ul">
+            <li><b id="unveil" class="code">unveil</b> : This action is used to <i class="special-word">install</i> a new package into the system, or <i>DEST</i> specified by the user</li>
+            <li><b id="veil" class="code">veil</b> : This action is used to <i class="special-word">uninstall</i> a package from the system <i style="color: var(--danger)">permanently</i></li>
+            <li><b id="strengthen" class="code">strengthen</b> : This action is used to <i class="special-word">update</i> all the packages <i>installed</i> on the system</li>
+            <li><b id="search" class="code">search</b> : This action can be used to <i class="special-word">search</i> packages or package on the <i>sync database</i></li>
+            <li><b id="help" class="code">help</b> : This action is used to display <i class="special-word">summarised information</i> about using the package manager</li>
+            <li><b id="info" class="code">info</b> : This action is used to display the version, name and description of a package or packages which are/is <i class="special-word">installed</i> on the system</li>
+            <li><b id="version" class="code">version</b> : This action is used to display the <i class="special-word">version</i> of the package manager</i></li>
+            <li><b id="rmpkg" class="code">rmpkg</b> : This action can be used to <i style="color: var(--danger)">delete</i> all the occurences of the specified package(s) <i class="special-word">in the cache directory</i></li>
+            <li><b id="pkgs" class="code">pkgs</b> : This action is used to list the <i class="special-word">number of packages installed</i>. Useful for other programs like fetch programs on the system</li>
+            <li><b id="list" class="code">list</b> : This action is used to list the names of all of the <i class="special-word">packages installed</i>. Useful for other programs like fetch programs on the system</li>
+            <li><b id="dumpvars" class="code">dumpvars</b> : This action can be used to <i class="special-word">display all of the variables</i> which affect the main operation of the package manager. Example: Useflags, Repository, Prefix, etc. Note that values of these variables are their final values given after parsing the configuration file. Useful for quickly checking variables</li>
+            <li><b id="stat" class="code">stat</b> : This action is used to display information of all installed packages. It lists out things like installed files size, number of installed files and number of installed packages.</li>
+            <li><b id="stat-upd" class="code">stat</b> : This action is used to display information of all installed packages. It lists out things like installed files size, number of installed files and number of installed packages.</li>
         </ul>
         <h3 class="mheaders" id="useflags">Using useflags while installing packages</h3>
         <p>USEFLAGS in this package manager are implemented the same way as they were in gentoo. There are global useflags which set useflags visible to all packages, and local useflags that only set useflags for a specific package.</p>

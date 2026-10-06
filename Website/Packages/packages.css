@@ -7,8 +7,10 @@ body{
     color: #ECE6E9;
     font-family: "SN Pro";
 }
-main {
-    margin-left: 21vw;
+.headers {
+    font-size: 25px;
+    color: var(--cool-dark-white);
+    padding: 0px;
 }
 .pkgbox {
 	background-color: var(--body-black);
@@ -17,7 +19,6 @@ main {
 	height: auto;
 	border-radius: 15px;
     border: solid 2px var(--black);
-    margin-left: calc(-6vw + 25px);
     padding-bottom: 25px;
 }
 .pkgbox .pkg {
@@ -57,10 +58,19 @@ main {
 .pkgbox > pre >  code {
     color: #F9F9F9;
 }
+#searchInput {
+    background-color: var(--body-black);
+    border: 3px solid var(--black);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 21px;
+    width: calc(100%);
+}
+#searchInput:focus { outline: none }
 @media all and (max-width: 830px){
-    main {
-        margin: 0px;
-    }
+    main { margin: 0px; }
+    .headers { margin-left: 0px; }
+    #searchInput, .para { margin-left: 8px; }
     .reponame {
         font-size: 55px;
         margin-top: 50px;

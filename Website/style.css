@@ -8,12 +8,6 @@ body {
     color: var(--cool-white);
     font-family: "SN Pro";
 }
-main {
-    margin-left: 21vw;
-}
-main .cont, main .headers, main .parap {
-    margin-left: -5vw;
-}
 #cont2 img {
     width: 100px;
     height: 100px;
@@ -22,13 +16,8 @@ main .cont, main .headers, main .parap {
     margin-top: calc((300px / 2) - (100px / 2));
     display: block;
 }
-#cont2 {
-    background-color: transparent;
-    margin-left: -5vw;
-}
-#cont2 h2 {
-    padding-left: 5px;
-}
+#cont2 { background-color: transparent; }
+#cont2 h2 { padding-left: 5px; }
 #cont2 p {
     font-size: 15px;
     padding-left: 5px;
@@ -81,7 +70,7 @@ main .cont, main .headers, main .parap {
         height: 70px;
         margin-top: calc((300px / 2) - (70px / 2));
         margin-right: 0px;
-        margin-left: calc((100% / 2) - (70px / 2));
+        margin-left: calc((100% / 2) - (60px / 2));
         max-width: 100px;
         max-height: 100px;
     }
