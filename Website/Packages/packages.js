@@ -29,13 +29,18 @@ function createPkgBox(pkg){
 document.getElementById("searchInput").onkeypress = function(e){
     if (!e) e = window.event;
     var keyCode = e.code || e.key;
+
     if (keyCode == 'Enter') {
         const pkgboxes = document.getElementsByClassName("pkgbox");
+        var total = pkgboxes.length;
+        var result = 0;
+
         for(let pkg of pkgboxes){
             pkg.hidden = false;
-            if(pkg.firstChild.innerText.match(document.getElementById("searchInput").value) == null){
-                pkg.hidden = true;
-            }
+            pkg.hidden = (pkg.firstChild.innerText.match(document.getElementById("searchInput").value) == null);
+            if (!pkg.hidden) result++;
         }
+
+        document.getElementById("searchResult").innerHTML = `Showing <b>${result}</b> out of <b>${total}</b>`;
     }
 }

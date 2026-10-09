@@ -14,7 +14,7 @@ body{
 }
 .pkgbox {
 	background-color: var(--body-black);
-	width: 100%;
+	width: calc(100% - 12px);
 	margin: 5px;
 	height: auto;
 	border-radius: 15px;
@@ -64,13 +64,19 @@ body{
     border-radius: 5px;
     padding: 5px;
     font-size: 21px;
-    width: calc(100%);
+    width: calc(100% - 25px);
+    margin: 5px;
+}
+#searchResult { 
+    font-size: 16px;
+    color: var(--cool-dark-white);
+    margin: 5px 0px 7px 5px;
 }
 #searchInput:focus { outline: none }
 @media all and (max-width: 830px){
     main { margin: 0px; }
     .headers { margin-left: 0px; }
-    #searchInput, .para { margin-left: 8px; }
+    .para { margin-left: 8px; }
     .reponame {
         font-size: 55px;
         margin-top: 50px;
