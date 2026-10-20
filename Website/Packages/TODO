@@ -1,2 +1,3 @@
 * useflags for pkgupdscript
 * Optional lowdown dependency for btop
+* Seperate useflags in DB

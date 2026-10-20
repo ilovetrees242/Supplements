@@ -24,6 +24,7 @@ for PACKAGE in db/sync/*; do
         sed -i "$COUNTER s/^.*/      \"useflags\": [\"$(echo ${USEFLAGS[*]} | sed 's/\s/","/g')\"]/" db.json; ((COUNTER++))
         sed -i "$COUNTER s/^.*/    },/" db.json;
         ALIASES=()
+        USEFLAGS=()
         DEPS=()
         ((COUNTER++))
     fi

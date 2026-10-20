@@ -40,15 +40,18 @@ body{
 .pkgdesc, .pkgver {
     color: #E6E0E3;
     width: 75%;
-    padding: 7.5px;
     border-radius: 5px;
 }
 .pkgbox > * {
 	font-size: 15px;
     margin: 0px 0px 0px 25px
 }
-.pkgbox > p > b {
+.pkgbox > p:not(.pkguseflags) > b {
 	color: #ECE6E9;
+}
+.pkguseflags b {
+    color: #afafaf;
+    font-size: 21px;
 }
 .pkgbox > pre {
     width: 75%;
