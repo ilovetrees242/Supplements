@@ -50,7 +50,7 @@ document.getElementById("searchInput").onkeypress = function(e){
         var result = 0;
 
         for(let pkg of pkgboxes){
-            let aliases = pkg.children[4].innerText.split(" ");
+            let aliases = (pkg.children[4] == null) ? [""] : pkg.children[4].innerText.split(" ");
             let query = document.getElementById("searchInput").value;
             aliases.shift();
             pkg.hidden = false;

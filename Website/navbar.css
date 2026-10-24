@@ -86,8 +86,8 @@
 .nav div h1 {
     bottom: 0;
     padding: 25px;
-    color: var(--black);
-    background: var(--cool-dark-white); 
+    color: var(--cool-dark-white);
+    border-top: 2px solid var(--dark-gray);
     position: absolute;
     width: 100%;
 }
@@ -95,15 +95,32 @@
     text-decoration: none;
     display: block;
     text-align: center;
-    color: var(--cool-white);
+    margin: 5px 0px 0px 5px;
+    border-radius: 5px;
+}
+.navbtn a {
+    padding: 0px;
+    margin-left: 5px;
+    margin-top: 0px;
+    font-weight: bold;
+    background: transparent;
+}
+.navbtn {
+    width: calc(100% - 70px);
+    display: flex;
     padding: 30px;
-    background-color: var(--body-black);
+    margin: 5px 0px 0px 5px;
     transition: 1s ease-in-out;
 }
-.nav a:hover {
-    background-color: var(--cool-white);
-    color: var(--black);
+.navbtn i {
+    font-size: 25px;
+    height: 25px;
+    text-align: center;
+}
+.navbtn:hover {
+    background-color: var(--dark-gray);
     border-radius: 5px;
+    cursor: pointer;
 }
 @media all and (max-width: 830px) {
     .nav {

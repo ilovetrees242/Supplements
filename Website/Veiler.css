@@ -2,10 +2,6 @@
     font-family: jbmn;
     src: url(Fonts/JetBrainsMonoNerdFont-Regular.ttf);
 }
-body {
-    background-color: #050505;
-    overflow-x: hidden;
-}
 *{
     margin: 0;
     color: #ECE6E9;

@@ -14,3 +14,14 @@ button.onclick = function(){
     rects[0].style.transform = visible ? `translateY(${offset}) rotate(45deg)` : "rotate(0deg)";
     rects[2].style.transform = visible ? `translateY(-${offset}) rotate(-45deg)` : "rotate(0deg)";
 }
+
+function buttonsFunction(){
+    for(let btn of document.getElementsByClassName("navbtn")){
+        btn.onclick = () => window.location.href = btn.children[1].href
+        btn.children[0].style.marginTop = (btn.children[1].clientHeight / 2) - (btn.children[0].clientHeight / 2) + "px"
+    }
+}
+
+buttonsFunction();
+
+document.getElementsByTagName("body")[0].onresize = buttonsFunction;

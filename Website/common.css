@@ -1,3 +1,7 @@
+body {
+    background-color: #050506;
+    overflow-x: hidden;
+}
 .intro {
     z-index: -1;
     width: auto;
@@ -71,8 +75,7 @@ footer p{
         margin-left: 0px;
     } 
     .intro {
-        margin-top: 80px;
-        margin-left: 10px;
+        margin: 80px 10px 10px 10px;
     }
 } 
 @media all and (max-width: 565px) {
